@@ -2,5 +2,16 @@
   <app-card-view>
     <h1>Contas</h1>
     <p>Faça o upload de suas contas.</p>
+
+    <form class="example-form" enctype="multipart/form-data" method="post">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input id="file-upload" type="file" (change)="preview($event)" multiple/>
+      </mat-form-field>
+    </form>
+
+    <button mat-button color="primary" (click)="callUpload()" [disabled]="!files">Fazer upload</button>
+    <div class="center">
+      <mat-spinner *ngIf="loading"></mat-spinner>
+     </div>
   </app-card-view>
 </div>

@@ -18,6 +18,7 @@ import localePt from '@angular/common/locales/pt';
 import { ExpenseComponent } from './components/expense/expense.component';
 import { HomeComponent } from './components/home/home.component';
 import { AccountsComponent } from './components/accounts/accounts.component';
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 
 registerLocaleData(localePt, 'pt');
 
@@ -31,6 +32,7 @@ registerLocaleData(localePt, 'pt');
     ExpenseComponent,
     HomeComponent,
     AccountsComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,

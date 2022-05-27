@@ -1,0 +1,14 @@
+:host {
+  background: #efefef;
+  display: block;
+}
+
+div {
+  background: green;
+  height: 10px;
+  width: 75%;
+}
+
+:host, div {
+  border-radius: 8px;
+}
