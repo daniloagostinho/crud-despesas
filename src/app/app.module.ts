@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { registerLocaleData } from '@angular/common';
 
 import localePt from '@angular/common/locales/pt';
+import { ExpenseComponent } from './components/expense/expense.component';
+import { HomeComponent } from './components/home/home.component';
+import { AccountsComponent } from './components/accounts/accounts.component';
 
 registerLocaleData(localePt, 'pt');
 
@@ -25,6 +28,9 @@ registerLocaleData(localePt, 'pt');
     CardViewComponent,
     AddExpenseComponent,
     FormComponent,
+    ExpenseComponent,
+    HomeComponent,
+    AccountsComponent,
   ],
   imports: [
     BrowserModule,
