@@ -1,0 +1,20 @@
+table {
+  width: 100%;
+}
+.btn-default {
+  float: right;
+  margin-bottom: 10px;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.float-right {
+  float: right;
+  margin-top: 20px;
+
+  h1 {color: green;}
+}
