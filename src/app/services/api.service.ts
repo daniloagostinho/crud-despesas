@@ -17,4 +17,8 @@ export class ApiService {
       delay(3000)
     )
   }
+
+  downloadFile() {
+    return this.httpClient.get(this.url + '/download')
+  }
 }

@@ -3,8 +3,22 @@ const cors = require("cors")
 
 const bodyParser = require("body-parser");
 const multipart = require("connect-multiparty")
+const multer = require("multer")
 
-const multipartModdleware  = multipart({uploadDir: './uploads'})
+const storage = multer.diskStorage({
+  destination: function(req, file, cb) {
+    cb(null, "uploads/")
+  },
+  filename: function(req, file, cb) {
+    cb(null, file.originalname)
+  }
+})
+
+const upload  = multer({storage})
+
+var fs = require('fs');
+var domain = require('domain').create();
+var FormData = require('form-data');
 
 const app = express();
 app.use(bodyParser.json())
@@ -23,11 +37,29 @@ app.use((req, res, next) => {
     next();
 });
 
-app.post('/upload', multipartModdleware, (req, res) => {
+app.post('/upload', upload.single("file"), (req, res) => {
   const files = req.files;
   console.log()
   res.json({message: files})
 })
+
+
+app.get('/download', (req, res) => {
+
+  fs.readdir('./uploads',function(error,files){
+    const form = new FormData();
+    const nu_array = files.map((item) => {
+      form.append('file', item, item.name)
+      console.log('item.name --> ' + item.name)
+
+      return { name: item.match(/[^:]*\s/g)[0], documento: item.match(/[^:]*$/g)[0], data: form };
+    });
+
+    res.send(nu_array);
+  });
+
+})
+
 
 app.use((err) => res.json({error: err}))
 

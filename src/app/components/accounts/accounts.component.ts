@@ -16,6 +16,7 @@ export class AccountsComponent implements OnInit {
   filePreview: any;
   currentPercent = 0;
   loading = false;
+  accordionData: any[] = [];
   ngOnInit(): void {
   }
   preview(event: Event) {
@@ -37,6 +38,7 @@ export class AccountsComponent implements OnInit {
         if (res.type === HttpEventType.Response) {
           this.loading = false;
           this.openSnackBar('Upload realizado com sucesso!')
+          this.downloadAccounts();
         }
       })
     }
@@ -45,6 +47,14 @@ export class AccountsComponent implements OnInit {
   openSnackBar(message: any) {
     this._snackBar.open(message, 'Fechar', {
       duration: 3000
+    })
+  }
+
+  downloadAccounts() {
+    this.loading = true;
+    this.api.downloadFile().subscribe(res => {
+      this.accordionData.push(res)
+      this.loading = false;
     })
   }
 }
