@@ -2,5 +2,45 @@
   <app-card-view>
     <h1>Contas</h1>
     <p>Faça o upload de suas contas.</p>
+
+    <form class="example-form" enctype="multipart/form-data" method="post">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input id="file-upload" type="file" name="file" (change)="preview($event)" multiple/>
+      </mat-form-field>
+      <button mat-button color="primary" (click)="callUpload()" [disabled]="!files">Fazer upload</button>
+    </form>
+
+
+    <div class="center">
+      <mat-spinner *ngIf="loading"></mat-spinner>
+     </div>
+  </app-card-view>
+
+  <app-card-view>
+    <h1>Contas</h1>
+    <p>Aqui você pode ver as contas que você fez upload</p>
+
+    <div class="center">
+      <mat-spinner *ngIf="loading"></mat-spinner>
+     </div>
+
+    <mat-accordion *ngFor="let acc of accordionData[0]">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{acc.name}}
+          </mat-panel-title>
+          <mat-panel-description>
+
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <p class="custom-display">{{acc.documento}}</p><span><img src="assets/images/pdf-logo.jpg" class="logo-pdf"></span>
+
+
+      </mat-expansion-panel>
+    </mat-accordion>
+
+
   </app-card-view>
 </div>

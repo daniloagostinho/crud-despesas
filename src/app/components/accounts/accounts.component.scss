@@ -1,0 +1,17 @@
+.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.logo-pdf {
+  width: 3%;
+}
+
+.custom-display {
+  display: inline-block;
+}
+
+.mat-accordion .mat-expansion-panel:last-of-type {
+  margin-top: 10px;
+}
