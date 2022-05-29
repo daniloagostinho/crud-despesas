@@ -1,4 +1,5 @@
 .display-flex{
+  width: 70%;
   height: 100vh;
   display: flex;
   flex-direction: row;
@@ -8,5 +9,9 @@
 
   h1 {
     font-size: 40px;
+  }
+
+  input {
+    margin-top: 20px;
   }
 }

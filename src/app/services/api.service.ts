@@ -7,7 +7,7 @@ import { delay, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  url = `http://localhost:3000`
+  url = `https://api-hands-on.herokuapp.com`
   constructor(private httpClient: HttpClient) { }
 
   uploadFile(files: Set<File>) {

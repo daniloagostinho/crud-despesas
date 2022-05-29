@@ -19,12 +19,31 @@ export class ExpenseComponent implements OnInit {
   dataLocalStorage: any[] = [];
   total: number = 0;
   pageSize: any[] = [5, 10, 25, 100]
+  cards: any[] = [];
   @ViewChild('paginator') paginator!: MatPaginator;
   constructor(
     public dialog: MatDialog, private store: StoreService,
     private _snackBar: MatSnackBar,
     private localStorage: LocalstorageService
-  ) { }
+  ) {
+    this.cards = [
+      {
+        title: 'Saldo atual',
+        value: 0,
+        routerLink: 'saldo-atual'
+      },
+      {
+        title: 'Receitas',
+        value: 0,
+        routerLink: 'receitas'
+      },
+      {
+        title: 'Despesas',
+        value: 0,
+        routerLink: 'despesas'
+      }
+    ]
+  }
 
   ngOnInit(): void {
         // quando abre modal de depsesas
@@ -102,4 +121,5 @@ export class ExpenseComponent implements OnInit {
     const filterValues = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValues.trim().toLowerCase();
   }
+
 }

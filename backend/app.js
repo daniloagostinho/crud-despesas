@@ -4,6 +4,7 @@ const cors = require("cors")
 const bodyParser = require("body-parser");
 const multipart = require("connect-multiparty")
 const multer = require("multer")
+const port  = process.env.PORT || 3000;
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
@@ -63,6 +64,6 @@ app.get('/download', (req, res) => {
 
 app.use((err) => res.json({error: err}))
 
-app.listen(3000, () => {
-  console.log('Servidor na porta 3000')
+app.listen(port, () => {
+  console.log(`Servidor na porta ${port}`)
 })
