@@ -14,6 +14,8 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatExpansionModule} from '@angular/material/expansion';
 
+import {MatTabsModule} from '@angular/material/tabs';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -28,7 +30,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatProgressSpinnerModule,
     MatSortModule,
     MatSnackBarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatTabsModule
   ],
   exports: [
     MatCardModule,
@@ -36,7 +39,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatProgressSpinnerModule,
     MatSnackBarModule,
     MatPaginatorModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatTabsModule
   ]
 })
 export class SharedMaterialModule { }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
-import { InputData } from 'src/app/models/inputData.model';
 import { StoreService } from '../service/store.service';
 
 @Component({
