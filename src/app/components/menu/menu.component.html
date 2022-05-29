@@ -1,9 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-dark">
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item" *ngFor="let menu of menuList">
-        <a class="nav-link" href="#" [routerLink]="[menu.name.toLowerCase()]">{{menu.name}}</a>
-      </li>
-    </ul>
-  </div>
+  <ul>
+    <li *ngFor="let menu of menuList">
+      <a class="nav-link" href="#" [routerLink]="[menu.name.toLowerCase()]">{{menu.name}}</a>
+    </li>
+  </ul>
 </nav>
