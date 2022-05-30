@@ -22,22 +22,25 @@
           </form>
         </mat-tab>
         <mat-tab label="CADASTRAR">
-          <form>
+          <form [formGroup]="formRegister">
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Nome" aria-label="Username" aria-describedby="basic-addon1">
+              <input type="text" class="form-control" placeholder="Nome" aria-label="Username" aria-describedby="basic-addon1"
+              formControlName="name">
             </div>
 
             <div class="input-group mb-3">
-              <input type="email" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+              <input type="email" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1"
+              formControlName="email">
             </div>
 
             <div class="input-group mb-3">
-              <input type="password" class="form-control" placeholder="Senha" aria-label="Username" aria-describedby="basic-addon1">
+              <input type="password" class="form-control" placeholder="Senha" aria-label="Username" aria-describedby="basic-addon1"
+              formControlName="password">
             </div>
 
 
             <div class="d-grid gap-2">
-              <button class="btn btn-primary" type="button">ENTRAR</button>
+              <button class="btn btn-primary" type="button" (click)="openDialogRegister()">CONTINUAR CADASTRO</button>
             </div>
           </form>
         </mat-tab>

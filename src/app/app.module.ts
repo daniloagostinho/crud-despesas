@@ -20,6 +20,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AccountsComponent } from './components/accounts/accounts.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 import { CurrentBalanceComponent } from './components/current-balance/current-balance.component';
+import { RevenuesComponent } from './components/revenues/revenues.component';
+import { RegisterComponent } from './components/register/register.component';
 
 registerLocaleData(localePt, 'pt');
 
@@ -34,7 +36,9 @@ registerLocaleData(localePt, 'pt');
     HomeComponent,
     AccountsComponent,
     ProgressBarComponent,
-    CurrentBalanceComponent
+    CurrentBalanceComponent,
+    RevenuesComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

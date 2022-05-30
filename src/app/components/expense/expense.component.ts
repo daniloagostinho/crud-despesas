@@ -3,9 +3,12 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableDataSource } from '@angular/material/table';
+import { ActivatedRoute } from '@angular/router';
 import { LocalstorageService } from 'src/app/services/localstorage.service';
 import { AddExpenseComponent } from 'src/app/shared/add-expense/add-expense.component';
 import { StoreService } from 'src/app/shared/service/store.service';
+
+import { Router,NavigationEnd  } from '@angular/router';
 
 @Component({
   selector: 'app-expense',
@@ -21,10 +24,12 @@ export class ExpenseComponent implements OnInit {
   pageSize: any[] = [5, 10, 25, 100]
   cards: any[] = [];
   @ViewChild('paginator') paginator!: MatPaginator;
+  currentRoute!: string;
   constructor(
     public dialog: MatDialog, private store: StoreService,
     private _snackBar: MatSnackBar,
-    private localStorage: LocalstorageService
+    private localStorage: LocalstorageService,
+    private router: Router
   ) {
     this.cards = [
       {
@@ -46,6 +51,7 @@ export class ExpenseComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getRouterCurent();
         // quando abre modal de depsesas
         this.store.getStore().subscribe(res => {
 
@@ -65,6 +71,13 @@ export class ExpenseComponent implements OnInit {
         this.loadLocalstorageDataTable('Despesas')
   }
 
+  getRouterCurent() {
+    this.currentRoute = this.router.url.replace('/', '')
+    console.log(this.currentRoute)
+  }
+  genratePath(link: string) {
+    return link.replace(this.currentRoute, link);
+  }
   openSnackBar(message: string) {
     this._snackBar.open(message, 'Fechar', {
       duration: 3000
@@ -121,5 +134,4 @@ export class ExpenseComponent implements OnInit {
     const filterValues = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValues.trim().toLowerCase();
   }
-
 }

@@ -4,6 +4,7 @@ import { AccountsComponent } from './components/accounts/accounts.component';
 import { CurrentBalanceComponent } from './components/current-balance/current-balance.component';
 import { ExpenseComponent } from './components/expense/expense.component';
 import { HomeComponent } from './components/home/home.component';
+import { RevenuesComponent } from './components/revenues/revenues.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,10 @@ const routes: Routes = [
     path: 'contas', component: AccountsComponent
   },
   {
-    path: 'saldo-atual', component: CurrentBalanceComponent
+    path: 'despesas/saldo-atual', component: CurrentBalanceComponent
+  },
+  {
+    path: 'despesas/receitas', component: RevenuesComponent
   }
 ];
 

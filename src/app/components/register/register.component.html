@@ -1,0 +1,119 @@
+<h1>Continue seu cadastro!</h1>
+<form [formGroup]="form">
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Nome"
+      aria-label="Username"
+      aria-describedby="basic-addon1"
+      formControlName="name"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <input
+      type="email"
+      class="form-control"
+      placeholder="Email"
+      aria-label="Username"
+      aria-describedby="basic-addon1"
+      formControlName="email"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <input
+      type="password"
+      class="form-control"
+      placeholder="Senha"
+      aria-label="Username"
+      aria-describedby="basic-addon1"
+      formControlName="password"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <mat-form-field>
+    <input
+      type="password"
+      class="form-control"
+      placeholder="Confirmar senha"
+      aria-label="Username"
+      aria-describedby="basic-addon1"
+      formControlName="confirmPassword"
+    />
+    <mat-error *ngIf="form.controls['confirmPassword'].hasError('equalsTo') && form.touched">
+      <p class=""warn>As senhas não são iguais!!</p>
+    </mat-error>
+  </mat-form-field>
+  </div>
+
+  <select  class="mt-4" name="selectedOption"  class="form-select" aria-label="Default select example" (change)="selected($any($event.target).value)">
+    <option>Documento</option>
+    <option *ngFor="let doc of documentsList">
+      {{doc.name}}
+    </option>
+  </select>
+
+  <ng-container formArrayName="cnh">
+    <ng-container *ngFor="let cnh of cnh.controls; let index = index">
+      <div *ngIf="changeDocument" [formGroupName]="index">
+        <div class="row mt-4">
+          <div class="col-6">
+            <div class="input-group mb-3">
+              <input
+                type="password"
+                class="form-control"
+                id="numero" name="numero"
+                placeholder="numero"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+                formControlName="numero"
+              />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input-group mb-3">
+              <input
+                type="password"
+                class="form-control"
+                id="numero" name="numero"
+                placeholder="Data de emissão"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+                id="dataEmissao"
+                name="dataEmissao"
+                type="date"
+                formControlName="dataEmissao"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <ng-container formArrayName="cpf">
+    <ng-container *ngFor="let cpf of cpf.controls; let index = index">
+      <div *ngIf="!changeDocument" [formGroupName]="index">
+        <div class="col-6">
+          <div class="input-group mb-3">
+            <input
+              type="number"
+              class="form-control"
+              id="numero" name="numero"
+              placeholder="numero"
+              aria-label="numero"
+              aria-describedby="basic-addon1"
+              formControlName="numero"
+            />
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+  <div class="d-grid gap-2 mt-4">
+    <button class="btn btn-primary" type="button" (click)="submit()">FINALIZAR CADASTRO</button>
+  </div>
+</form>
