@@ -3,15 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { AccountsComponent } from './components/accounts/accounts.component';
 import { CurrentBalanceComponent } from './components/current-balance/current-balance.component';
 import { ExpenseComponent } from './components/expense/expense.component';
-import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 import { RevenuesComponent } from './components/revenues/revenues.component';
 
 const routes: Routes = [
   {
+    path: '', redirectTo: 'login', pathMatch: 'full'
+  },
+  {
     path: 'despesas', component: ExpenseComponent
   },
   {
-    path: 'home', component: HomeComponent
+    path: 'login', component: LoginComponent
   },
   {
     path: 'contas', component: AccountsComponent
