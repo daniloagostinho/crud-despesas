@@ -84,7 +84,38 @@ mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.w65a0yv.mongodb
   console.log('Conectado ao banco!!')
 }).catch((err) => console.log(err))
 
+// retorna dados do usuario
+app.get("/user/:id", checkToken, async(req, res) => {
+  const id = req.params.id;
 
+  // checa se usuario existe
+  const user = await User.findById(id, '-password')
+
+  // se usuario nao for encontrado
+  if(!user) {
+    return res.status(404).json({message: 'Usuario nao encontado!'})
+  }
+
+  res.status(200).json({user})
+})
+
+function checkToken(req, res, next) {
+  const authHeader = req.headers.authorization
+  const token = authHeader && authHeader.split(" ")[1]
+  if(!token) {
+    return res.status(401).json({message: 'Acesso negado! Verifique se o token foi passado!'});
+  }
+
+  try {
+    const secret = process.env.SECRET
+    jwt.verify(token, secret)
+    next();
+  } catch(err) {
+    res.status(400).json({message: "Token inválido!"})
+  }
+}
+
+// registro
 app.post('/auth/register', async(req, res) => {
   const {name, email, password, confirmPassword} = req.body;
 
@@ -128,6 +159,60 @@ app.post('/auth/register', async(req, res) => {
   } catch(error) {
     res.status(500).json({message: 'Erro no servidor.. tente mais tarde!'})
   }
+})
+
+// login
+app.post("/auth/login", async(req, res) => {
+  const {email, password} = req.body;
+
+  if(!email) {
+    return res.status(422).json({message: 'O email é obrigatório!'})
+  }
+  if(!password) {
+    return res.status(422).json({message: 'A senha é obrigatório!'})
+  }
+
+  const user = await User.findOne({email: email})
+
+  if(!user) {
+    return res.status(404).json({message: 'Usuario não encontrado!'})
+  }
+
+  // checa se senha da math
+
+  const checkpassword = await bcrypt.compare(password, user.password)
+
+  if(!checkpassword) {
+    return res.status(422).json({message: 'Senha inválida!'})
+  }
+
+  try {
+
+    const secret = process.env.SECRET;
+    const token =  jwt.sign({
+      id: user._id
+    },
+    secret)
+
+    res.status(200).json({
+      message: 'Autenticação realizada com sucesso!', token
+    })
+
+  } catch(err) {
+      console.log(err)
+      res.status(500).json({
+        message: 'Aconteceu um erro no servidor, tente mais tarde!'
+      })
+  }
+
+})
+
+// listagem
+
+app.get("/list/user", checkToken, async(req, res) => {
+  User.find({}, '-password').then((user) => {
+    res.status(200).json({user})
+  })
 })
 
 app.listen(port, () => {

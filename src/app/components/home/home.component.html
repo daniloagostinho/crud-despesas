@@ -7,17 +7,17 @@
     <div class="col-6">
       <mat-tab-group>
         <mat-tab label="ENTRAR">
-          <form>
+          <form [formGroup]="formLogin">
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Nome" aria-label="Username" aria-describedby="basic-addon1">
+              <input type="email" class="form-control" placeholder="E-mail" aria-label="E-mail" aria-describedby="basic-addon1" formControlName="email">
             </div>
 
             <div class="input-group mb-3">
-              <input type="emal" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+              <input type="password" class="form-control" placeholder="Senha" aria-label="Senha" aria-describedby="basic-addon1" formControlName="password">
             </div>
 
             <div class="d-grid gap-2">
-              <button class="btn btn-primary" type="button">ENTRAR</button>
+              <button class="btn btn-primary" type="button" (click)="login()">ENTRAR</button>
             </div>
           </form>
         </mat-tab>

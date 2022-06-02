@@ -3,12 +3,12 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableDataSource } from '@angular/material/table';
-import { ActivatedRoute } from '@angular/router';
 import { LocalstorageService } from 'src/app/services/localstorage.service';
 import { AddExpenseComponent } from 'src/app/shared/add-expense/add-expense.component';
 import { StoreService } from 'src/app/shared/service/store.service';
 
-import { Router,NavigationEnd  } from '@angular/router';
+import { Router  } from '@angular/router';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-expense',
@@ -29,7 +29,8 @@ export class ExpenseComponent implements OnInit {
     public dialog: MatDialog, private store: StoreService,
     private _snackBar: MatSnackBar,
     private localStorage: LocalstorageService,
-    private router: Router
+    private router: Router,
+    private apiService: ApiService
   ) {
     this.cards = [
       {
@@ -51,6 +52,7 @@ export class ExpenseComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getUserData();
     this.getRouterCurent();
         // quando abre modal de depsesas
         this.store.getStore().subscribe(res => {
@@ -70,7 +72,27 @@ export class ExpenseComponent implements OnInit {
         })
         this.loadLocalstorageDataTable('Despesas')
   }
+  // busca informações do usuario.. tipo o id para passar para o proximo método. O getUserInfo
+  getUserData() {
+    this.apiService.userData('token').subscribe((res: any) => {
+      if(res) {
+        const {_id} = res.user[0];
+        this.getUserInfo(_id);
+      }
+    }, error => {
+      console.log(error)
+    })
+  }
 
+  // metodo que bate numa rota privada
+  // necessita passar o autoruzation na requisição
+  getUserInfo(id: any) {
+    this.apiService.userInfo('token', id).subscribe(res => {
+      console.log(res)
+    }, error => {
+      console.log(error)
+    })
+  }
   getRouterCurent() {
     this.currentRoute = this.router.url.replace('/', '')
     console.log(this.currentRoute)

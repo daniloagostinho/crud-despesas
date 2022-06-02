@@ -2,6 +2,7 @@ import { FormGroup, FormBuilder, Validators, FormArray, NgForm } from '@angular/
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormValidations } from 'src/app/shared/validations/form-validation';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-register',
@@ -22,7 +23,8 @@ export class RegisterComponent implements OnInit {
   ]
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private apiService: ApiService
   ) {
     this.form = this.fb.group({
       name: [data.data.name, Validators.required],
@@ -44,22 +46,6 @@ export class RegisterComponent implements OnInit {
 
   get cpf() {
     return this.form.controls['cpf'] as FormArray;
-  }
-
-  addField(campo: string) {
-    console.log('campo -->> ', campo)
-    const adress = this.fb.group({
-      street: [null, Validators.required],
-      district: [null, Validators.required],
-      number: [null, Validators.required]
-    })
-
-    const personalData = this.fb.group({
-      cpf: [null, Validators.required],
-      cnh: [null, Validators.required],
-      profession: [null, Validators.required]
-    })
-
   }
 
   cnhForm = this.fb.group({
@@ -86,7 +72,26 @@ export class RegisterComponent implements OnInit {
   }
 
   submit() {
-    console.log('form -->> ', this.form);
+    console.log(this.form)
+    if(this.form.valid) {
+
+      const name = this.form.get('name')!.value;
+      const email = this.form.get('email')!.value;
+      const password = this.form.get('password')!.value;
+      const confirmPassword = this.form.get('confirmPassword')!.value;
+
+      const payload = {
+        name,
+        email,
+        password,
+        confirmPassword
+      }
+      this.apiService.registerUser(payload).subscribe(res => {
+        console.log(res)
+      }, error => {
+
+      })
+    }
   }
 }
 
