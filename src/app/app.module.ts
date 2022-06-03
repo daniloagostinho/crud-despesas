@@ -16,12 +16,13 @@ import { registerLocaleData } from '@angular/common';
 
 import localePt from '@angular/common/locales/pt';
 import { ExpenseComponent } from './components/expense/expense.component';
-import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 import { AccountsComponent } from './components/accounts/accounts.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 import { CurrentBalanceComponent } from './components/current-balance/current-balance.component';
 import { RevenuesComponent } from './components/revenues/revenues.component';
 import { RegisterComponent } from './components/register/register.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 registerLocaleData(localePt, 'pt');
 
@@ -33,12 +34,13 @@ registerLocaleData(localePt, 'pt');
     AddExpenseComponent,
     FormComponent,
     ExpenseComponent,
-    HomeComponent,
+    LoginComponent,
     AccountsComponent,
     ProgressBarComponent,
     CurrentBalanceComponent,
     RevenuesComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

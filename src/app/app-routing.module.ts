@@ -1,26 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountsComponent } from './components/accounts/accounts.component';
-import { CurrentBalanceComponent } from './components/current-balance/current-balance.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ExpenseComponent } from './components/expense/expense.component';
-import { HomeComponent } from './components/home/home.component';
-import { RevenuesComponent } from './components/revenues/revenues.component';
+import { LoginComponent } from './components/login/login.component';
+import { GuardGuard } from './guards/guard.guard';
 
 const routes: Routes = [
   {
-    path: 'despesas', component: ExpenseComponent
+    path: '', redirectTo: 'login', pathMatch: 'full'
   },
   {
-    path: 'home', component: HomeComponent
+    path: 'dashboard', component: DashboardComponent,
+    canActivate: [GuardGuard]
   },
   {
-    path: 'contas', component: AccountsComponent
+    path: 'despesas', component: ExpenseComponent,
+    canActivate: [GuardGuard]
   },
   {
-    path: 'despesas/saldo-atual', component: CurrentBalanceComponent
+    path: 'login', component: LoginComponent,
   },
   {
-    path: 'despesas/receitas', component: RevenuesComponent
+    path: 'contas', component: AccountsComponent,
+    canActivate: [GuardGuard]
   }
 ];
 

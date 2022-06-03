@@ -1,0 +1,20 @@
+nav {
+  background-color: #4984fd;
+  height: 60px;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  li {
+    list-style: none;
+  }
+  a {
+    color: white;
+    margin-top: 10px;
+    text-decoration: none;
+  }
+
+}

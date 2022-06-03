@@ -8,18 +8,13 @@ import { Menu } from './models/menu.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  menu!: Menu[];
 
   constructor() {
 
   }
 
   ngOnInit() {
-    this.menu = [
-      {name: 'Home'},
-      {name: 'Despesas'},
-      {name: 'Contas'},
-    ]
+
 
   }
 }
