@@ -9,6 +9,7 @@ import { StoreService } from 'src/app/shared/service/store.service';
 
 import { Router  } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
+import { UtilsService } from 'src/app/services/utils.service';
 
 @Component({
   selector: 'app-expense',
@@ -27,10 +28,10 @@ export class ExpenseComponent implements OnInit {
   currentRoute!: string;
   constructor(
     public dialog: MatDialog, private store: StoreService,
-    private _snackBar: MatSnackBar,
     private localStorage: LocalstorageService,
     private router: Router,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private utilsService: UtilsService
   ) {
     this.cards = [
       {
@@ -61,7 +62,7 @@ export class ExpenseComponent implements OnInit {
             this.loading = true;
             setTimeout(() => {
               this.loading = false;
-              this.openSnackBar('Despesa incluída com sucesso!')
+              this.utilsService.openSnackBar('Despesa incluída com sucesso!')
               // gera array localstorage para adiciona ao localstorage
               let dataLocalStorage = this.generateArrayDataLocalstorage(res);
               this.addLocalStorage('Despesas', dataLocalStorage);
@@ -88,9 +89,8 @@ export class ExpenseComponent implements OnInit {
   // necessita passar o autoruzation na requisição
   getUserInfo(id: any) {
     this.apiService.userInfo('token', id).subscribe(res => {
-      console.log(res)
     }, error => {
-      console.log(error)
+      this.utilsService.openSnackBar(error.error.message)
     })
   }
   getRouterCurent() {
@@ -100,11 +100,7 @@ export class ExpenseComponent implements OnInit {
   genratePath(link: string) {
     return link.replace(this.currentRoute, link);
   }
-  openSnackBar(message: string) {
-    this._snackBar.open(message, 'Fechar', {
-      duration: 3000
-    })
-  }
+
   openDialog() {
     this.dialog.open(AddExpenseComponent, {
       width: '900px',

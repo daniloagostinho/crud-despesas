@@ -22,6 +22,7 @@ import { ProgressBarComponent } from './components/progress-bar/progress-bar.com
 import { CurrentBalanceComponent } from './components/current-balance/current-balance.component';
 import { RevenuesComponent } from './components/revenues/revenues.component';
 import { RegisterComponent } from './components/register/register.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 registerLocaleData(localePt, 'pt');
 
@@ -38,7 +39,8 @@ registerLocaleData(localePt, 'pt');
     ProgressBarComponent,
     CurrentBalanceComponent,
     RevenuesComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

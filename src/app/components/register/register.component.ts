@@ -3,6 +3,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormValidations } from 'src/app/shared/validations/form-validation';
 import { ApiService } from 'src/app/services/api.service';
+import { UtilsService } from 'src/app/services/utils.service';
 
 @Component({
   selector: 'app-register',
@@ -24,7 +25,8 @@ export class RegisterComponent implements OnInit {
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
     private fb: FormBuilder,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private utilsService: UtilsService
   ) {
     this.form = this.fb.group({
       name: [data.data.name, Validators.required],
@@ -86,12 +88,18 @@ export class RegisterComponent implements OnInit {
         password,
         confirmPassword
       }
-      this.apiService.registerUser(payload).subscribe(res => {
-        console.log(res)
+      this.apiService.registerUser(payload).subscribe((res: any) => {
+        this.utilsService.openSnackBar(res.message)
+        this.refreshPage();
       }, error => {
 
       })
     }
+  }
+  refreshPage() {
+    setTimeout(() => {
+      location.reload();
+    }, 3000)
   }
 }
 
