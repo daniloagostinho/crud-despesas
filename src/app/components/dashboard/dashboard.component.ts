@@ -18,7 +18,8 @@ export class DashboardComponent implements OnInit {
       {name: 'Upload de Contas'},
     ]
 
-    this.nameClient = 'beltrano'
+
+
 
     this.routeActivated.params.subscribe(parm => {
       if(parm['name']) {

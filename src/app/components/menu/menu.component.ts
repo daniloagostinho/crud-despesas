@@ -10,7 +10,6 @@ import { LocalstorageService } from 'src/app/services/localstorage.service';
 })
 export class MenuComponent implements OnInit {
   @Input() menuList!: Menu[];
-  @Input() nameClient!: string;
   constructor(private localStorageService: LocalstorageService, private router: Router) { }
 
   ngOnInit(): void {
@@ -23,4 +22,11 @@ export class MenuComponent implements OnInit {
 
   }
 
+  messageHor(): any {
+    let hour = new Date().getHours();
+    if (hour <= 5) return 'Boa madrugada';
+    if (hour < 12) return 'Bom dia'
+    if(hour < 18) return 'Boa tarde'
+    return 'Boa noite'
+  }
 }

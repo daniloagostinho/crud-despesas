@@ -71,6 +71,7 @@ export class ExpenseComponent implements OnInit {
     this.apiService.userData('token').subscribe((res: any) => {
       if(res) {
         const {_id} = res.user[0];
+        console.log('userData -->> ', res)
         this.getUserInfo(_id);
       }
     }, error => {
