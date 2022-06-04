@@ -36,13 +36,11 @@ export class ExpenseComponent implements OnInit {
     this.cards = [
       {
         title: 'Saldo atual',
-        value: 0,
-        routerLink: 'saldo-atual'
+        value: 0
       },
       {
         title: 'Dívidas',
-        value: 0,
-        routerLink: 'receitas'
+        value: 0
       }
     ]
   }
@@ -73,6 +71,7 @@ export class ExpenseComponent implements OnInit {
     this.apiService.userData('token').subscribe((res: any) => {
       if(res) {
         const {_id} = res.user[0];
+        console.log('userData -->> ', res)
         this.getUserInfo(_id);
       }
     }, error => {

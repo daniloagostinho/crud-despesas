@@ -15,16 +15,8 @@ const routes: Routes = [
     canActivate: [GuardGuard]
   },
   {
-    path: 'despesas', component: ExpenseComponent,
-    canActivate: [GuardGuard]
-  },
-  {
     path: 'login', component: LoginComponent,
   },
-  {
-    path: 'contas', component: AccountsComponent,
-    canActivate: [GuardGuard]
-  }
 ];
 
 @NgModule({

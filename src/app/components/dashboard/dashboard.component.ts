@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Menu } from 'src/app/models/menu.model';
 
 @Component({
@@ -9,7 +10,7 @@ import { Menu } from 'src/app/models/menu.model';
 export class DashboardComponent implements OnInit {
   menu!: Menu[];
   nameClient!: string;
-  constructor() { }
+  constructor(private routeActivated: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.menu = [
@@ -17,7 +18,14 @@ export class DashboardComponent implements OnInit {
       {name: 'Upload de Contas'},
     ]
 
-    this.nameClient = 'beltrano'
+
+
+
+    this.routeActivated.params.subscribe(parm => {
+      if(parm['name']) {
+        console.log(parm)
+      }
+    })
   }
 
 }
