@@ -13,9 +13,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.menu = [
-      {name: 'Home'},
-      {name: 'Despesas'},
-      {name: 'Contas'},
+      {name: 'Cadastro de Dívidas'},
+      {name: 'Upload de Contas'},
     ]
 
     this.nameClient = 'beltrano'

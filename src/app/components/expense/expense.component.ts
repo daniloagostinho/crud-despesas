@@ -40,14 +40,9 @@ export class ExpenseComponent implements OnInit {
         routerLink: 'saldo-atual'
       },
       {
-        title: 'Receitas',
+        title: 'Dívidas',
         value: 0,
         routerLink: 'receitas'
-      },
-      {
-        title: 'Despesas',
-        value: 0,
-        routerLink: 'despesas'
       }
     ]
   }
