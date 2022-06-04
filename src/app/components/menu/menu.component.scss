@@ -8,12 +8,31 @@ nav {
     justify-content: space-around;
   }
 
+  @media screen and(min-width: 375px){
+    height: 50%;
+
+    ul {
+      flex-direction: column;
+    }
+  }
+
+  @media screen and(min-width: 1140px) {
+    ul {
+      flex-direction: row;
+    }
+  }
+
   li {
     list-style: none;
   }
   a {
     color: white;
     text-decoration: none;
+  }
+
+  a:hover {
+    color: white;
+    cursor: pointer;
   }
 
 }

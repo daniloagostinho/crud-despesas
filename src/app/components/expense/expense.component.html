@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row mt-5" >
     <div class="col-6" *ngFor="let card of cards">
-      <mat-card class="card" [routerLink]="genratePath(card.routerLink)">
+      <mat-card class="card">
         <p>{{card.title}}</p>
         <h1>{{card.value}}</h1>
       </mat-card>
@@ -23,7 +23,7 @@
       class="btn-default btn btn-primary"
       (click)="openDialog()"
     >
-      Adicionar Despesa
+      Adicionar Dívida
     </button>
     <div class="center">
       <mat-spinner *ngIf="loading"></mat-spinner>
@@ -71,6 +71,6 @@
     </mat-paginator>
   </app-card-view>
   <div class="float-right" *ngIf="!loading">
-    <h1>Total despesas: {{ total }}</h1>
+    <h1>Total das suas dívidas: {{ total | currency: 'BRL': true}}</h1>
   </div>
 </div>
