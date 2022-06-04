@@ -24,6 +24,8 @@ import { RevenuesComponent } from './components/revenues/revenues.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 registerLocaleData(localePt, 'pt');
 
 @NgModule({
@@ -56,6 +58,7 @@ registerLocaleData(localePt, 'pt');
       provide: LOCALE_ID,
       useValue: 'pt'
     },
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
