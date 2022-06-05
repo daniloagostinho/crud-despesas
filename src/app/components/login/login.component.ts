@@ -67,7 +67,7 @@ export class LoginComponent implements OnInit {
         let {token} = res;
         this.addTokenLocalstorage('token', JSON.stringify(token))
         this.router.navigate(['/dashboard'])
-      }, error => {
+      }, (error: any) => {
         this.utilsService.openSnackBar(error.error.message)
       })
     }
