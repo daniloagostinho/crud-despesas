@@ -26,11 +26,11 @@ export class ApiService {
   }
 
   registerUser(user: any) {
-    return this.httpClient.post(this.urlLocal + '/auth/register', user)
+    return this.httpClient.post(this.url + '/auth/register', user)
   }
 
   loginUser(user: any) {
-    return this.httpClient.post(this.urlLocal + '/auth/login', user)
+    return this.httpClient.post(this.url + '/auth/login', user)
   }
 
   userData(nameToken: string) {
@@ -39,7 +39,7 @@ export class ApiService {
     const headers= new HttpHeaders()
       .set('content-type', 'application/json')
       .set('Authorization', `Bearer ${getToken}`);
-    return this.httpClient.get(this.urlLocal + '/list/user', {headers})
+    return this.httpClient.get(this.url + '/list/user', {headers})
   }
   userInfo(nameToken: string, id: any) {
     const getToken = this.localStorage.getLocalStorage(nameToken);
@@ -48,6 +48,6 @@ export class ApiService {
       .set('content-type', 'application/json')
       .set('Authorization', `Bearer ${getToken}`);
 
-    return this.httpClient.get(this.urlLocal + `/user/${id}`, {headers: headers})
+    return this.httpClient.get(this.url + `/user/${id}`, {headers: headers})
   }
 }
