@@ -30,7 +30,7 @@ export class ApiService {
   }
 
   loginUser(user: any) {
-    return this.httpClient.post(environment.BASE_URL + '/auth/login', user)
+    return this.httpClient.post('/api/auth/login', user)
   }
 
   userData(nameToken: string) {

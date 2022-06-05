@@ -1,0 +1,7 @@
+{
+  "/api/*": {
+    "target": "https://crud-despesas.herokuapp.com",
+    "secure": true,
+    "logLevel": "debug"
+  }
+}
