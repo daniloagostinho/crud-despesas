@@ -26,7 +26,7 @@ export class ApiService {
   }
 
   registerUser(user: any) {
-    return this.httpClient.post(this.url + '/auth/register', user)
+    return this.httpClient.post('/api/auth/register', user)
   }
 
   loginUser(user: any) {
