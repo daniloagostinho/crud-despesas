@@ -1,7 +1,12 @@
 {
   "/api/*": {
-    "target": "https://crud-despesas.herokuapp.com/api/auth/login",
+    "target": "https://crud-despesas.herokuapp.com/",
     "secure": true,
-    "logLevel": "debug"
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api/auth/login": "/api/auth/login",
+      "^/api": ""
+    }
   }
 }
