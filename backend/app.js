@@ -22,29 +22,25 @@ const storage = multer.diskStorage({
 const upload  = multer({storage})
 
 var fs = require('fs');
-var domain = require('domain').create();
 var FormData = require('form-data');
 
 const app = express();
+app.use(cors())
+
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", '*');
+  res.header("Access-Control-Allow-Credentials", true);
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+  res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
+  next();
+});
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
-app.use(cors({
-  credentials: true,
-}));
-
 // Models
 const User = require("./models/User")
-
-app.use((req, res, next) => {
-	//Qual site tem permissão de realizar a conexão, no exemplo abaixo está o "*" indicando que qualquer site pode fazer a conexão
-    res.header("Access-Control-Allow-Origin", "*");
-	//Quais são os métodos que a conexão pode realizar na API
-    res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
-    app.use(cors());
-    next();
-});
-
 
 app.post('/upload', upload.single("file"), (req, res) => {
   const files = req.files;
