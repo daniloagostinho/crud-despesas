@@ -41,6 +41,10 @@ export class ExpenseComponent implements OnInit {
       {
         title: 'Dívidas',
         value: 0
+      },
+      {
+        title: 'Saldo total',
+        value: 0
       }
     ]
   }

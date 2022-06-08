@@ -32,6 +32,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 // Models
 const User = require("./models/User")
+const Register = require("./models/Register")
 
 app.post('/upload', upload.single("file"), (req, res) => {
   const files = req.files;
@@ -103,8 +104,8 @@ function checkToken(req, res, next) {
   }
 }
 
-// registro
-app.post('/auth/register', async(req, res) => {
+// registro user
+app.post('/auth/register/user', async(req, res) => {
   const {name, email, password, confirmPassword} = req.body;
 
   // validations
@@ -144,6 +145,38 @@ app.post('/auth/register', async(req, res) => {
   try {
     await user.save()
     res.status(201).json({message: 'Usuario criado com sucesso!'})
+  } catch(error) {
+    res.status(500).json({message: 'Erro no servidor.. tente mais tarde!'})
+  }
+})
+
+
+// cadastro
+app.post('/auth/register', async(req, res) => {
+
+  const {tipoReceita, valor, dataEntrada} = req.body;
+
+  // validations
+  if(!tipoReceita) {
+    return res.status(422).json({message: 'O nome é obrigatório!'})
+  }
+  if(!valor) {
+    return res.status(422).json({message: 'O email é obrigatório!'})
+  }
+  if(!dataEntrada) {
+    return res.status(422).json({message: 'A senha é obrigatório!'})
+  }
+
+  // cria o usuario
+  const register = new Register({
+    tipoReceita,
+    valor,
+    dataEntrada
+  })
+
+  try {
+    await register.save()
+    res.status(201).json({message: 'cadastro realizado com sucesso!'})
   } catch(error) {
     res.status(500).json({message: 'Erro no servidor.. tente mais tarde!'})
   }
@@ -193,6 +226,14 @@ app.post("/auth/login", async(req, res) => {
       })
   }
 
+})
+
+
+app.get("/list/register", async(req, res) => {
+  Register.find({}).then((list) => {
+
+    res.status(200).json({list})
+  })
 })
 
 // listagem

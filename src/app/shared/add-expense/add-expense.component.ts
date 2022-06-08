@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
+import { ApiService } from 'src/app/services/api.service';
 import { StoreService } from '../service/store.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class AddExpenseComponent implements OnInit {
   form!: FormGroup;
   categoriaModel: any;
   constructor(private fb: FormBuilder, private store: StoreService,
-    private dialogRef: MatDialogRef<AddExpenseComponent>) { }
+    private dialogRef: MatDialogRef<AddExpenseComponent>,
+    private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -58,8 +60,6 @@ export class AddExpenseComponent implements OnInit {
         valor,
         dataVencimento
       }
-
-      console.log('payload >>> ', payload)
       this.store.setStore(payload);
     }
 

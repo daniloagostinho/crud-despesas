@@ -1,0 +1,29 @@
+
+<form [formGroup]="form">
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Tipo de Receita</label>
+    <select name="categoria" id="categoria" class="form-control" [(ngModel)]="tipoReceitaModel" [ngModelOptions]="{standalone: true}">
+      <option *ngFor="let receita of receitas">
+        {{receita.name}}
+      </option>
+    </select>
+    </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Valor</label>
+    <input
+    type="number"
+    class="form-control"
+    id="valor" aria-describedby="valor"
+    placeholder="Valor" formControlName="valor">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Data de Entrada</label>
+    <input
+    type="date"
+    class="form-control"
+    id="dataEntrada" aria-describedby="dataEntrada"
+    placeholder="Data de Vencimento" formControlName="dataEntrada">
+  </div>
+  <button class="btn btn-primary" (click)="submit()">Adicionar Receita</button>
+</form>

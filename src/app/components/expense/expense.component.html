@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row mt-5" >
-    <div class="col-6" *ngFor="let card of cards">
+    <div class="col-4" *ngFor="let card of cards">
       <mat-card class="card">
         <p>{{card.title}}</p>
         <h1>{{card.value}}</h1>
@@ -8,6 +8,7 @@
     </div>
   </div>
   <app-card-view>
+    <app-months></app-months>
     <h1>Cadastre suas Dívidas</h1>
     <mat-form-field appearance="standard" class="input-filter">
       <mat-label class="mat-label">Econtrar Dívida</mat-label>

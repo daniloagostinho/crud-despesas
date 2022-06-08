@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class BrodcastService {
   private store = new BehaviorSubject<any>(null)
+  private storeRegister = new BehaviorSubject<any>(null)
   constructor() { }
 
   setStore(store: any) {
@@ -14,5 +15,13 @@ export class BrodcastService {
 
   getStore() {
     return this.store.asObservable();
+  }
+
+  setStoreRegister(store: boolean) {
+    this.storeRegister.next(store);
+  }
+
+  getStoreRegister() {
+    return this.storeRegister.asObservable();
   }
 }

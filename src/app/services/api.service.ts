@@ -16,21 +16,30 @@ export class ApiService {
   uploadFile(files: Set<File>) {
     const formData = new FormData();
     files.forEach(file => formData.append('file', file, file.name))
-    return this.httpClient.post(this.url + '/upload', formData, {reportProgress: true, observe: 'events'}).pipe(
+    return this.httpClient.post(this.urlLocal + '/upload', formData, {reportProgress: true, observe: 'events'}).pipe(
       delay(3000)
     )
   }
 
   downloadFile() {
-    return this.httpClient.get(this.url + '/download')
+    return this.httpClient.get(this.urlLocal + '/download')
   }
 
   registerUser(user: any) {
-    return this.httpClient.post(this.url + '/auth/register', user)
+    return this.httpClient.post(this.urlLocal + '/auth/register/user', user)
   }
 
+  registerRegistration(register: any) {
+    return this.httpClient.post(this.urlLocal + '/auth/register', register)
+  }
+
+  getRegister() {
+    return this.httpClient.get(this.urlLocal + '/list/register')
+  }
+
+
   loginUser(user: any) {
-    return this.httpClient.post(this.url + '/auth/login', user)
+    return this.httpClient.post(this.urlLocal + '/auth/login', user)
   }
 
   userData(nameToken: string) {
@@ -39,7 +48,7 @@ export class ApiService {
     const headers= new HttpHeaders()
       .set('content-type', 'application/json')
       .set('Authorization', `Bearer ${getToken}`);
-    return this.httpClient.get(this.url + '/list/user', {headers})
+    return this.httpClient.get(this.urlLocal + '/list/user', {headers})
   }
   userInfo(nameToken: string, id: any) {
     const getToken = this.localStorage.getLocalStorage(nameToken);
@@ -48,6 +57,6 @@ export class ApiService {
       .set('content-type', 'application/json')
       .set('Authorization', `Bearer ${getToken}`);
 
-    return this.httpClient.get(this.url + `/user/${id}`, {headers: headers})
+    return this.httpClient.get(this.urlLocal + `/user/${id}`, {headers: headers})
   }
 }

@@ -6,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class StoreService {
   store = new BehaviorSubject<any>(null);
+  storeRegister = new BehaviorSubject<any>(null);
   constructor() { }
 
   getStore() {
@@ -14,5 +15,13 @@ export class StoreService {
 
   setStore(data: any) {
     this.store.next(data)
+  }
+
+  setStoreRegister(store: boolean) {
+    this.storeRegister.next(store);
+  }
+
+  getStoreRegister() {
+    return this.storeRegister.asObservable();
   }
 }
