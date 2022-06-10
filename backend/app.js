@@ -33,7 +33,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 // Models
 const User = require("./models/User")
 const Register = require("./models/Register")
-
+const Debts = require("./models/Debts")
 app.post('/upload', upload.single("file"), (req, res) => {
   const files = req.files;
   console.log()
@@ -182,6 +182,45 @@ app.post('/auth/register', async(req, res) => {
   }
 })
 
+app.post('/auth/debts', async(req, res) => {
+
+
+  const title = req.body.name.title;
+
+  const {despesa, categoria, valor, dataVencimento} = req.body.name.listMouth;
+
+  // cria o usuario
+  const debts = new Debts({
+    month: {
+      name: {
+        title,
+        listMouth: {
+          despesa,
+          categoria,
+          valor,
+          dataVencimento
+        }
+      }
+    }
+  })
+
+  try {
+    await debts.save()
+    res.status(201).json({message: 'cadastro realizado com sucesso!'})
+  } catch(error) {
+    res.status(500).json({message: 'Erro no servidor.. tente mais tarde!'})
+  }
+})
+
+app.get("/list/debts", async(req, res) => {
+  Debts.find({}).then((list) => {
+    const {mouth} = req.headers;
+    console.log('header mouth -->> ', mouth)
+    const result = mouth ? list.filter(item => item.month.name.title.includes(mouth))  : list
+    res.status(200).json({result})
+  })
+})
+
 // login
 app.post("/auth/login", async(req, res) => {
   const {email, password} = req.body;
@@ -235,6 +274,7 @@ app.get("/list/register", async(req, res) => {
     res.status(200).json({list})
   })
 })
+
 
 // listagem
 

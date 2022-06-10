@@ -26,6 +26,7 @@ export class ExpenseComponent implements OnInit {
   cards: any[] = [];
   @ViewChild('paginator') paginator!: MatPaginator;
   currentRoute!: string;
+  mouthSelected: any;
   constructor(
     public dialog: MatDialog, private store: StoreService,
     private localStorage: LocalstorageService,
@@ -69,6 +70,9 @@ export class ExpenseComponent implements OnInit {
           }
         })
         this.loadLocalstorageDataTable('Despesas')
+        this.store.getStoreMouth().subscribe(res => {
+          this.mouthSelected = res
+        })
   }
   // busca informações do usuario.. tipo o id para passar para o proximo método. O getUserInfo
   getUserData() {
@@ -107,6 +111,10 @@ export class ExpenseComponent implements OnInit {
         any: '',
       },
     });
+
+    this.dialog.afterAllClosed.subscribe(res => {
+      this.getRegisterDebts();
+    })
   }
   // chama função que adiciona objeto ao locastoarge
   addLocalStorage(nameItem: string, dataItem?: any) {
@@ -149,5 +157,11 @@ export class ExpenseComponent implements OnInit {
     console.log(event)
     const filterValues = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValues.trim().toLowerCase();
+  }
+
+  getRegisterDebts(){
+    this.apiService.getRegisterDebts(this.mouthSelected).subscribe(res => {
+      console.log('res -->> get register Debs -->', res);
+    })
   }
 }

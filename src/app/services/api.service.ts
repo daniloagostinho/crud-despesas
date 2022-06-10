@@ -1,8 +1,9 @@
 import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 import { delay, Observable } from 'rxjs';
 import { LocalstorageService } from './localstorage.service';
+import { StoreService } from '../shared/service/store.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +11,10 @@ import { LocalstorageService } from './localstorage.service';
 export class ApiService {
   url = `https://api-hands-on.herokuapp.com`
   urlLocal = 'http://localhost:3000'
+
   constructor(private httpClient: HttpClient,
-    private localStorage: LocalstorageService) { }
+    private localStorage: LocalstorageService) {
+    }
 
   uploadFile(files: Set<File>) {
     const formData = new FormData();
@@ -33,10 +36,19 @@ export class ApiService {
     return this.httpClient.post(this.urlLocal + '/auth/register', register)
   }
 
+  registerRegistrationDebts(debt: any) {
+    return this.httpClient.post(this.urlLocal + '/auth/debts', debt)
+  }
+
   getRegister() {
     return this.httpClient.get(this.urlLocal + '/list/register')
   }
 
+  getRegisterDebts(param: any) {
+    let headers = new HttpHeaders();
+    headers = headers.set('mouth', param)
+    return this.httpClient.get(this.urlLocal + '/list/debts', {headers: headers})
+  }
 
   loginUser(user: any) {
     return this.httpClient.post(this.urlLocal + '/auth/login', user)

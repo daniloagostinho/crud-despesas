@@ -13,9 +13,11 @@ export class AddExpenseComponent implements OnInit {
   categorias: any;
   form!: FormGroup;
   categoriaModel: any;
+  mounth: any;
   constructor(private fb: FormBuilder, private store: StoreService,
     private dialogRef: MatDialogRef<AddExpenseComponent>,
-    private apiService: ApiService) { }
+    private apiService: ApiService,
+    private storeService: StoreService) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -42,6 +44,11 @@ export class AddExpenseComponent implements OnInit {
         name: 'Outros'
       }
     ]
+
+    this.storeService.getStoreMouth().subscribe(res => {
+      console.log('chegou o o mouth -->>', res)
+      this.mounth = res;
+    })
   }
   submit() {
     this.form.patchValue({
@@ -55,15 +62,25 @@ export class AddExpenseComponent implements OnInit {
       let dataVencimento = this.form.controls['dataVencimento'].value;
 
       const payload = {
-        despesa,
-        categoria,
-        valor,
-        dataVencimento
+        name: {
+          title: this.mounth,
+          listMouth: {
+            despesa,
+            categoria,
+            valor,
+            dataVencimento
+          }
+        }
       }
       this.store.setStore(payload);
+      this.apiService.registerRegistrationDebts(payload).subscribe(res => {
+        console.log('res --> ', res)
+      })
+
     }
 
     console.log(this.form)
     this.dialogRef.close();
   }
+
 }

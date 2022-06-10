@@ -7,6 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 export class StoreService {
   store = new BehaviorSubject<any>(null);
   storeRegister = new BehaviorSubject<any>(null);
+  storeMouth = new BehaviorSubject<any>(null)
   constructor() { }
 
   getStore() {
@@ -23,5 +24,13 @@ export class StoreService {
 
   getStoreRegister() {
     return this.storeRegister.asObservable();
+  }
+
+  setStoreMouth(store: any) {
+    this.storeMouth.next(store);
+  }
+
+  getStoreMouth() {
+    return this.storeMouth.asObservable();
   }
 }
