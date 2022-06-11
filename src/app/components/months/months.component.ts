@@ -52,6 +52,8 @@ export class MonthsComponent implements OnInit {
     this.i = this.i - 1;
     this.i = this.i % this.mounths.length;
     this.mounth =  this.mounths[this.i];
+    this.storeService.setStoreMouth(this.mounths[this.i])
+    this.storeService.setSearchDebtsByMouth(true);
   }
 
   next() {
@@ -60,5 +62,6 @@ export class MonthsComponent implements OnInit {
     this.i = this.i % this.mounths.length;
     this.mounth =  this.mounths[this.i]
     this.storeService.setStoreMouth(this.mounths[this.i])
+    this.storeService.setSearchDebtsByMouth(true);
   }
 }

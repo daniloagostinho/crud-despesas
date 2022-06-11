@@ -8,6 +8,7 @@ export class StoreService {
   store = new BehaviorSubject<any>(null);
   storeRegister = new BehaviorSubject<any>(null);
   storeMouth = new BehaviorSubject<any>(null)
+  searchDebtsByMouth = new BehaviorSubject<boolean>(false)
   constructor() { }
 
   getStore() {
@@ -32,5 +33,13 @@ export class StoreService {
 
   getStoreMouth() {
     return this.storeMouth.asObservable();
+  }
+
+  setSearchDebtsByMouth(store: any) {
+    this.searchDebtsByMouth.next(store);
+  }
+
+  getSearchDebtsByMouth() {
+    return this.searchDebtsByMouth.asObservable();
   }
 }

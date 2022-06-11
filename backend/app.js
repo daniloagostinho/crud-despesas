@@ -9,6 +9,11 @@ const bodyParser = require("body-parser");
 const multer = require("multer")
 
 const port  = process.env.PORT || 3000;
+// middleware função que será executada antes de qualquer requisição.
+
+app.use((req, res, next) => {
+
+})
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
@@ -215,10 +220,32 @@ app.post('/auth/debts', async(req, res) => {
 app.get("/list/debts", async(req, res) => {
   Debts.find({}).then((list) => {
     const {mouth} = req.headers;
-    console.log('header mouth -->> ', mouth)
-    const result = mouth ? list.filter(item => item.month.name.title.includes(mouth))  : list
+    const result = mouth ? list.filter(item => item.month.name.title.includes(mouth)) : list
     res.status(200).json({result})
   })
+})
+
+// testar depois no angular!!
+app.put("/update/debts/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const user = await Debts.findByIdAndUpdate(id, req.body, {new: true})
+
+    res.status(200).json(user)
+  } catch(error) {
+    res.status(500).send(error.message)
+  }
+})
+
+app.delete("/delete/debts/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const user = await Debts.findByIdAndRemove(id)
+
+    res.status(200).json(user)
+  } catch(error) {
+    res.status(500).send(error.message)
+  }
 })
 
 // login

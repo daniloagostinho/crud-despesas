@@ -46,7 +46,6 @@ export class AddExpenseComponent implements OnInit {
     ]
 
     this.storeService.getStoreMouth().subscribe(res => {
-      console.log('chegou o o mouth -->>', res)
       this.mounth = res;
     })
   }
@@ -72,9 +71,10 @@ export class AddExpenseComponent implements OnInit {
           }
         }
       }
-      this.store.setStore(payload);
       this.apiService.registerRegistrationDebts(payload).subscribe(res => {
-        console.log('res --> ', res)
+        if(res) {
+          this.store.setStore(payload);
+        }
       })
 
     }

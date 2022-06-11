@@ -27,6 +27,7 @@ export class ExpenseComponent implements OnInit {
   @ViewChild('paginator') paginator!: MatPaginator;
   currentRoute!: string;
   mouthSelected: any;
+  emptyResult!: boolean;
   constructor(
     public dialog: MatDialog, private store: StoreService,
     private localStorage: LocalstorageService,
@@ -51,28 +52,48 @@ export class ExpenseComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.defineInitMouth()
+    this.getRegisterDebts(this.mouthSelected)
+    console.log('mouthSelected >>> ', this.mouthSelected)
     this.getUserData();
-    this.getRouterCurent();
         // quando abre modal de depsesas
         this.store.getStore().subscribe(res => {
 
-          if(res !== null) {
-            this.loading = true;
-            setTimeout(() => {
-              this.loading = false;
-              this.utilsService.openSnackBar('Despesa incluída com sucesso!')
-              // gera array localstorage para adiciona ao localstorage
-              let dataLocalStorage = this.generateArrayDataLocalstorage(res);
-              this.addLocalStorage('Despesas', dataLocalStorage);
-              this.loadLocalstorageDataTable('Despesas', res);
-              this.totalExpense();
-            }, 2000)
-          }
+          // if(res !== null) {
+          //   this.loading = true;
+          //   setTimeout(() => {
+          //     this.loading = false;
+          //     this.utilsService.openSnackBar('Despesa incluída com sucesso!')
+          //     // gera array localstorage para adiciona ao localstorage
+          //     let dataLocalStorage = this.generateArrayDataLocalstorage(res);
+          //     this.addLocalStorage('Despesas', dataLocalStorage);
+          //     this.loadLocalstorageDataTable('Despesas', res);
+          //     this.totalExpense();
+          //   }, 2000)
+          // }
+
+          // TODO
+
+          this.getRegisterDebts(this.mouthSelected)
         })
-        this.loadLocalstorageDataTable('Despesas')
         this.store.getStoreMouth().subscribe(res => {
           this.mouthSelected = res
         })
+
+        this.store.getSearchDebtsByMouth().subscribe(res => {
+          if(res) {
+            // TODO
+            this.getRegisterDebts(this.mouthSelected)
+            this.dataSource.paginator = this.paginator;
+          }
+        })
+  }
+
+  defineInitMouth() {
+    let date = new Date();
+    let dateString = date.toLocaleDateString("pt-br", {month: "long"});
+    let letterDateString = dateString[0].toUpperCase() + dateString.substr(1)
+    this.mouthSelected == undefined ? this.mouthSelected = letterDateString : this.mouthSelected
   }
   // busca informações do usuario.. tipo o id para passar para o proximo método. O getUserInfo
   getUserData() {
@@ -87,6 +108,27 @@ export class ExpenseComponent implements OnInit {
     })
   }
 
+  getRegisterDebts(yearSelected: any) {
+    this.apiService.getRegisterDebts(yearSelected).subscribe((res: any) => {
+      this.loading  = true;
+      let arr: any[] = [];
+      if(res.result.length === 0) {
+        this.emptyResult = true;
+      } else {
+        this.emptyResult = false;
+        this.dataSource.paginator = this.paginator;
+        res.result.forEach((element: any) => {
+          arr.push(element.month.name.listMouth)
+        })
+      }
+
+      setTimeout(() => {
+        this.dataSource.data = arr;
+        this.loading = false;
+      }, 2000)
+    })
+  }
+
   // metodo que bate numa rota privada
   // necessita passar o autoruzation na requisição
   getUserInfo(id: any) {
@@ -94,13 +136,6 @@ export class ExpenseComponent implements OnInit {
     }, error => {
       this.utilsService.openSnackBar(error.error.message)
     })
-  }
-  getRouterCurent() {
-    this.currentRoute = this.router.url.replace('/', '')
-    console.log(this.currentRoute)
-  }
-  genratePath(link: string) {
-    return link.replace(this.currentRoute, link);
   }
 
   openDialog() {
@@ -111,10 +146,6 @@ export class ExpenseComponent implements OnInit {
         any: '',
       },
     });
-
-    this.dialog.afterAllClosed.subscribe(res => {
-      this.getRegisterDebts();
-    })
   }
   // chama função que adiciona objeto ao locastoarge
   addLocalStorage(nameItem: string, dataItem?: any) {
@@ -159,9 +190,4 @@ export class ExpenseComponent implements OnInit {
     this.dataSource.filter = filterValues.trim().toLowerCase();
   }
 
-  getRegisterDebts(){
-    this.apiService.getRegisterDebts(this.mouthSelected).subscribe(res => {
-      console.log('res -->> get register Debs -->', res);
-    })
-  }
 }
