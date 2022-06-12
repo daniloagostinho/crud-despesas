@@ -11,9 +11,10 @@ const multer = require("multer")
 const port  = process.env.PORT || 3000;
 // middleware função que será executada antes de qualquer requisição.
 
-app.use((req, res, next) => {
-
-})
+app.use(function(err, req, res, next) {
+  console.error(err.stack);
+  res.status(500).send(err);
+});
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
@@ -41,7 +42,6 @@ const Register = require("./models/Register")
 const Debts = require("./models/Debts")
 app.post('/upload', upload.single("file"), (req, res) => {
   const files = req.files;
-  console.log()
   res.json({message: files})
 })
 
@@ -52,7 +52,6 @@ app.get('/download', (req, res) => {
     const form = new FormData();
     const nu_array = files.map((item) => {
       form.append('file', item, item.name)
-      console.log('item.name --> ' + item.name)
 
       return { name: item.match(/[^:]*\s/g)[0], documento: item.match(/[^:]*$/g)[0], data: form };
     });
@@ -75,7 +74,6 @@ const dbPassword = process.env.DB_PASS;
 app.use(express.json())
 
 mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.w65a0yv.mongodb.net/?retryWrites=true&w=majority`).then(() => {
-  console.log('Conectado ao banco!!')
 }).catch((err) => console.log(err))
 
 // retorna dados do usuario
