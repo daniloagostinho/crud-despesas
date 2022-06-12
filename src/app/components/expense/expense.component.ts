@@ -28,10 +28,9 @@ export class ExpenseComponent implements OnInit {
   currentRoute!: string;
   mouthSelected: any;
   emptyResult!: boolean;
+  arrDebts: any[] = [];
   constructor(
     public dialog: MatDialog, private store: StoreService,
-    private localStorage: LocalstorageService,
-    private router: Router,
     private apiService: ApiService,
     private utilsService: UtilsService
   ) {
@@ -54,8 +53,8 @@ export class ExpenseComponent implements OnInit {
   ngOnInit(): void {
     this.defineInitMouth()
     this.getRegisterDebts(this.mouthSelected)
-    console.log('mouthSelected >>> ', this.mouthSelected)
     this.getUserData();
+    this.totalExpense();
         // quando abre modal de depsesas
         this.store.getStore().subscribe(res => {
 
@@ -84,7 +83,7 @@ export class ExpenseComponent implements OnInit {
           if(res) {
             // TODO
             this.getRegisterDebts(this.mouthSelected)
-            this.dataSource.paginator = this.paginator;
+            // this.dataSource.paginator = this.paginator;
           }
         })
   }
@@ -116,10 +115,12 @@ export class ExpenseComponent implements OnInit {
         this.emptyResult = true;
       } else {
         this.emptyResult = false;
-        this.dataSource.paginator = this.paginator;
+        this.arrDebts = arr;
+        // this.dataSource.paginator = this.paginator;
         res.result.forEach((element: any) => {
           arr.push(element.month.name.listMouth)
         })
+        this.totalExpense();
       }
 
       setTimeout(() => {
@@ -148,40 +149,41 @@ export class ExpenseComponent implements OnInit {
     });
   }
   // chama função que adiciona objeto ao locastoarge
-  addLocalStorage(nameItem: string, dataItem?: any) {
-    this.setExpense(nameItem, dataItem)
-  }
+  // addLocalStorage(nameItem: string, dataItem?: any) {
+  //   this.setExpense(nameItem, dataItem)
+  // }
   // adiciona despesa ao locastorage
-  setExpense(name: string, expense: any) {
-    this.localStorage.setLocalStorage(name, JSON.stringify(expense))
-  }
+  // setExpense(name: string, expense: any) {
+  //   this.localStorage.setLocalStorage(name, JSON.stringify(expense))
+  // }
 
   // adiciona objeto no array de localstorage e retorarna o array
-  generateArrayDataLocalstorage(dataItem: any) {
-    this.dataLocalStorage.push(dataItem)
-    return this.dataLocalStorage;
-  }
+  // generateArrayDataLocalstorage(dataItem: any) {
+  //   this.dataLocalStorage.push(dataItem)
+  //   return this.dataLocalStorage;
+  // }
 
-  loadLocalstorageDataTable(nameItem: any, dataSourceExpenseModal?: any) {
-    let dataSourceLocalstorage = this.localStorage.getLocalStorage(nameItem);
-    // se o localstorage não estiver vazio .. eu defino o valor da tabela com o array do localstorage
-    if(dataSourceLocalstorage !== null) {
-      this.dataSource.data = dataSourceLocalstorage;
-      this.dataSource.paginator = this.paginator;
-    } else {
-      // se estiver vazio eu defino o valor da tabela com os valores do modal..
-      this.dataSource.data = dataSourceExpenseModal;
-      this.dataSource.paginator = this.paginator;
-    }
-  }
+  // salva divida no localstorage
+  // loadLocalstorageDataTable(nameItem: any, dataSourceExpenseModal?: any) {
+  //   let dataSourceLocalstorage = this.localStorage.getLocalStorage(nameItem);
+  //   // se o localstorage não estiver vazio .. eu defino o valor da tabela com o array do localstorage
+  //   if(dataSourceLocalstorage !== null) {
+  //     this.dataSource.data = dataSourceLocalstorage;
+  //     this.dataSource.paginator = this.paginator;
+  //   } else {
+  //     // se estiver vazio eu defino o valor da tabela com os valores do modal..
+  //     this.dataSource.data = dataSourceExpenseModal;
+  //     // this.dataSource.paginator = this.paginator;
+  //   }
+  // }
 
   generateTotalExpenseArray() {
-    let total = this.dataLocalStorage.map(total => total.valor)
+    let total = this.arrDebts.map((total: any) => Number(total.valor))
     return total;
   }
   totalExpense() {
     let totalArr = this.generateTotalExpenseArray();
-    this.total = totalArr.reduce((total, num ) => total + num);
+    this.total = totalArr.reduce((total, num ) => total + num, 0);
   }
 
   applyFilter(event: Event) {

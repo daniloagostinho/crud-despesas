@@ -65,7 +65,8 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
 
-    <mat-paginator
+    <!-- Ver se vai usar -->
+    <!-- <mat-paginator
       *ngIf="!emptyResult && !loading"
       #paginator
       [length]="100"
@@ -73,7 +74,7 @@
       [pageSizeOptions]="pageSize"
       aria-label="Select page"
     >
-    </mat-paginator>
+    </mat-paginator> -->
 
     <ng-container *ngIf="emptyResult && !loading">
       <div class="container">
