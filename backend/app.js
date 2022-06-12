@@ -1,9 +1,10 @@
 const express = require("express");
 const cors = require("cors")
 require('dotenv').config()
-const mongoose = require("mongoose")
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
+const mongoose = require("mongoose")
+
 
 const bodyParser = require("body-parser");
 const multer = require("multer")
@@ -11,10 +12,7 @@ const multer = require("multer")
 const port  = process.env.PORT || 3000;
 // middleware função que será executada antes de qualquer requisição.
 
-app.use(function(err, req, res, next) {
-  console.error(err.stack);
-  res.status(500).send(err);
-});
+
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
@@ -35,6 +33,11 @@ app.use(cors())
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
+
+app.use(function(err, req, res, next) {
+  console.error(err.stack);
+  res.status(500).send(err);
+});
 
 // Models
 const User = require("./models/User")
@@ -67,14 +70,24 @@ app.get('/', function (req, res) {
 })
 
 
+
+
 //credencials
 const dbUser = process.env.DB_USER;
 const dbPassword = process.env.DB_PASS;
 
 app.use(express.json())
 
-mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.w65a0yv.mongodb.net/?retryWrites=true&w=majority`).then(() => {
-}).catch((err) => console.log(err))
+
+const connect =() => {
+  mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.w65a0yv.mongodb.net/?retryWrites=true&w=majority`)
+  const connection = mongoose.connection;
+
+  connection.on('error', () => {console.error("Erro ao se conectar ao mongo")})
+  connection.on('open', () => {console.error("Conectamos ao mongo")})
+}
+
+connect()
 
 // retorna dados do usuario
 app.get("/user/:id", checkToken, async(req, res) => {
