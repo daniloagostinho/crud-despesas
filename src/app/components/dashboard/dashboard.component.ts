@@ -23,11 +23,11 @@ export class DashboardComponent implements OnInit {
 
     this.cards = [
       {
-        title: 'Saldo atual',
+        title: 'Total dívidas',
         value: 0
       },
       {
-        title: 'Dívidas',
+        title: 'Total receitas',
         value: 0
       },
       {

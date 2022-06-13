@@ -31,7 +31,7 @@ export class RevenuesComponent implements OnInit {
     this.getRegisterRevenues(this.mouthSelected);
     this.defineInitMouth();
 
-    this.storeService.getStore().subscribe((res) => {
+    this.storeService.getStoreRegisterRevenues().subscribe((res) => {
       // if(res !== null) {
       //   this.loading = true;
       //   setTimeout(() => {
@@ -80,7 +80,7 @@ export class RevenuesComponent implements OnInit {
   }
 
   initDataSource() {
-    this.storeService.getStoreRegister().subscribe(res => {
+    this.storeService.getStoreRegisterRevenues().subscribe(res => {
       if(res) {
         this.apiService
         .getRegisterRevenues(this.mouthSelected)
