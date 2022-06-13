@@ -10,6 +10,8 @@ import { Menu } from 'src/app/models/menu.model';
 export class DashboardComponent implements OnInit {
   menu!: Menu[];
   nameClient!: string;
+  cards: any[] = [];
+
   constructor(private routeActivated: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -19,7 +21,20 @@ export class DashboardComponent implements OnInit {
     ]
 
 
-
+    this.cards = [
+      {
+        title: 'Saldo atual',
+        value: 0
+      },
+      {
+        title: 'Dívidas',
+        value: 0
+      },
+      {
+        title: 'Saldo total',
+        value: 0
+      }
+    ]
 
     this.routeActivated.params.subscribe(parm => {
       if(parm['name']) {

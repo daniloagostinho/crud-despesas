@@ -23,7 +23,6 @@ export class ExpenseComponent implements OnInit {
   dataLocalStorage: any[] = [];
   total: number = 0;
   pageSize: any[] = [5, 10, 25, 100]
-  cards: any[] = [];
   @ViewChild('paginator') paginator!: MatPaginator;
   currentRoute!: string;
   mouthSelected: any;
@@ -34,20 +33,6 @@ export class ExpenseComponent implements OnInit {
     private apiService: ApiService,
     private utilsService: UtilsService
   ) {
-    this.cards = [
-      {
-        title: 'Saldo atual',
-        value: 0
-      },
-      {
-        title: 'Dívidas',
-        value: 0
-      },
-      {
-        title: 'Saldo total',
-        value: 0
-      }
-    ]
   }
 
   ngOnInit(): void {

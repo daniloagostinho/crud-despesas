@@ -32,16 +32,18 @@ export class ApiService {
     return this.httpClient.post(this.urlLocal + '/auth/register/user', user)
   }
 
-  registerRegistration(register: any) {
-    return this.httpClient.post(this.urlLocal + '/auth/register', register)
+  registerRevenues(revenues: any) {
+    return this.httpClient.post(this.urlLocal + '/auth/revenues', revenues)
   }
 
   registerRegistrationDebts(debt: any) {
     return this.httpClient.post(this.urlLocal + '/auth/debts', debt)
   }
 
-  getRegister() {
-    return this.httpClient.get(this.urlLocal + '/list/register')
+  getRegisterRevenues(param: any) {
+    let headers = new HttpHeaders();
+    headers = headers.set('mouth', param)
+    return this.httpClient.get(this.urlLocal + '/list/revenues', {headers: headers})
   }
 
   getRegisterDebts(param: any) {

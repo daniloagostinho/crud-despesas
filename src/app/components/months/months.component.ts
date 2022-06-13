@@ -1,11 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { StoreService } from 'src/app/shared/service/store.service';
-
-export enum Mounths {
-  'Janeiro' = 'Janeiro',
-  'Fevereiro' = 'Fevereiro',
-  'Março' =  'Março'
-}
 
 @Component({
   selector: 'app-months',
@@ -14,6 +8,8 @@ export enum Mounths {
 })
 export class MonthsComponent implements OnInit {
   mounth!: any;
+  @Input() typeItem: any;
+
   mounths: any[] = [
     'Janeiro',
     'Fevereiro',
@@ -32,6 +28,7 @@ export class MonthsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMouthCurrent();
+    console.log(this.typeItem)
   }
 
   getMouthCurrent() {
@@ -53,7 +50,11 @@ export class MonthsComponent implements OnInit {
     this.i = this.i % this.mounths.length;
     this.mounth =  this.mounths[this.i];
     this.storeService.setStoreMouth(this.mounths[this.i])
-    this.storeService.setSearchDebtsByMouth(true);
+    if(this.typeItem == 'debts') {
+      this.storeService.setSearchDebtsByMouth(true);
+    } else {
+      this.storeService.setSearchRevenuesByMouth(true)
+    }
   }
 
   next() {
@@ -62,6 +63,10 @@ export class MonthsComponent implements OnInit {
     this.i = this.i % this.mounths.length;
     this.mounth =  this.mounths[this.i]
     this.storeService.setStoreMouth(this.mounths[this.i])
-    this.storeService.setSearchDebtsByMouth(true);
+    if(this.typeItem == 'debts') {
+      this.storeService.setSearchDebtsByMouth(true);
+    } else {
+      this.storeService.setSearchRevenuesByMouth(true)
+    }
   }
 }

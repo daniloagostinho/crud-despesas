@@ -1,15 +1,18 @@
 <div class="container">
   <app-card-view>
-    <h1>Cadastre suas Receitas</h1>
-    <mat-form-field appearance="standard" class="input-filter">
-      <mat-label class="mat-label">Econtrar Receita</mat-label>
-      <input
-        matInput
-        placeholder="Pesquisar Receita"
-        (keyup)="applyFilter($event)"
-        #input
-      />
-    </mat-form-field>
+    <app-months [typeItem]="'revenues'"></app-months>
+    <div *ngIf="!emptyResult && !loading">
+      <h1>Cadastre suas Receitas</h1>
+      <mat-form-field appearance="standard" class="input-filter">
+        <mat-label class="mat-label">Econtrar Receita</mat-label>
+        <input
+          matInput
+          placeholder="Pesquisar Receita"
+          (keyup)="applyFilter($event)"
+          #input
+        />
+      </mat-form-field>
+    </div>
     <button
       color="primary"
       class="btn-default btn btn-primary"
@@ -20,8 +23,10 @@
     <div class="center">
       <mat-spinner *ngIf="loading"></mat-spinner>
     </div>
+    <div class="display">
+    </div>
     <table
-      *ngIf="!loading"
+      *ngIf="!loading && !emptyResult"
       mat-table
       [dataSource]="dataSource"
       class="mat-elevation-z8"
@@ -49,16 +54,23 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
-    <mat-paginator
+    <!-- <mat-paginator
       #paginator
       [length]="100"
       [pageSize]="2"
       [pageSizeOptions]="pageSize"
       aria-label="Select page"
     >
-    </mat-paginator>
+    </mat-paginator> -->
+    <ng-container *ngIf="emptyResult && !loading">
+      <div class="container">
+        <div class="center">
+          <span>Você ainda não cadastrou receitas para esse mês.</span>
+        </div>
+      </div>
+    </ng-container>
   </app-card-view>
   <div class="float-right" *ngIf="!loading">
-    <h1>Total das suas Receitas: {{ total | currency: 'BRL': true}}</h1>
+    <h1>Total das suas Receitas: {{ totalRevenues | currency: 'BRL': true}}</h1>
   </div>
 </div>

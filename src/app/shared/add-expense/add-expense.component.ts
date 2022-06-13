@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { ApiService } from 'src/app/services/api.service';
+import { UtilsService } from 'src/app/services/utils.service';
 import { StoreService } from '../service/store.service';
 
 @Component({
@@ -17,7 +18,8 @@ export class AddExpenseComponent implements OnInit {
   constructor(private fb: FormBuilder, private store: StoreService,
     private dialogRef: MatDialogRef<AddExpenseComponent>,
     private apiService: ApiService,
-    private storeService: StoreService) { }
+    private storeService: StoreService,
+    private utilsService: UtilsService) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -74,6 +76,7 @@ export class AddExpenseComponent implements OnInit {
       this.apiService.registerRegistrationDebts(payload).subscribe(res => {
         if(res) {
           this.store.setStore(payload);
+          this.utilsService.openSnackBar('Despesa incluída com sucesso!')
         }
       })
 

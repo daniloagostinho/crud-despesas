@@ -13,6 +13,7 @@ export class AddRevenuesComponent implements OnInit {
   form!: FormGroup;
   receitas: any[] = [];
   tipoReceitaModel: any;
+  mouth: any;
   constructor(private fb: FormBuilder, private dialogRef: MatDialogRef<AddRevenuesComponent>,
     private apiService: ApiService,
     private storeService: StoreService) {
@@ -41,6 +42,10 @@ export class AddRevenuesComponent implements OnInit {
         name: 'Outros'
       }
     ]
+
+    this.storeService.getStoreMouth().subscribe(res => {
+      this.mouth = res
+    })
   }
 
 
@@ -49,19 +54,25 @@ export class AddRevenuesComponent implements OnInit {
       tipoReceita: this.tipoReceitaModel
     })
 
-    console.log(this.form)
     if(this.form.valid) {
       let tipoReceita = this.form.controls['tipoReceita'].value;
       let valor = this.form.controls['valor'].value;
       let dataEntrada = this.form.controls['dataEntrada'].value;
 
       const payload = {
-        tipoReceita,
-        valor,
-        dataEntrada
+        month: {
+          name: {
+            title: this.mouth,
+            listMouth: {
+              tipoReceita,
+              valor,
+              dataEntrada
+            }
+          }
+        }
       }
 
-      this.apiService.registerRegistration(payload).subscribe(res => {
+      this.apiService.registerRevenues(payload).subscribe((res: any) => {
         if(res) {
           this.storeService.setStoreRegister(true)
         }

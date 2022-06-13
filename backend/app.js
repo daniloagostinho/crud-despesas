@@ -41,7 +41,7 @@ app.use(function(err, req, res, next) {
 
 // Models
 const User = require("./models/User")
-const Register = require("./models/Register")
+const Revenues = require("./models/Revenues")
 const Debts = require("./models/Debts")
 app.post('/upload', upload.single("file"), (req, res) => {
   const files = req.files;
@@ -168,35 +168,6 @@ app.post('/auth/register/user', async(req, res) => {
 
 
 // cadastro
-app.post('/auth/register', async(req, res) => {
-
-  const {tipoReceita, valor, dataEntrada} = req.body;
-
-  // validations
-  if(!tipoReceita) {
-    return res.status(422).json({message: 'O nome é obrigatório!'})
-  }
-  if(!valor) {
-    return res.status(422).json({message: 'O email é obrigatório!'})
-  }
-  if(!dataEntrada) {
-    return res.status(422).json({message: 'A senha é obrigatório!'})
-  }
-
-  // cria o usuario
-  const register = new Register({
-    tipoReceita,
-    valor,
-    dataEntrada
-  })
-
-  try {
-    await register.save()
-    res.status(201).json({message: 'cadastro realizado com sucesso!'})
-  } catch(error) {
-    res.status(500).json({message: 'Erro no servidor.. tente mais tarde!'})
-  }
-})
 
 app.post('/auth/debts', async(req, res) => {
 
@@ -305,11 +276,51 @@ app.post("/auth/login", async(req, res) => {
 
 })
 
+app.post('/auth/revenues', async(req, res) => {
 
-app.get("/list/register", async(req, res) => {
-  Register.find({}).then((list) => {
+  const {tipoReceita, valor, dataEntrada} = req.body.month.name.listMouth;
+  const title =  req.body.month.name.title;
 
-    res.status(200).json({list})
+  // validations
+  if(!tipoReceita) {
+    return res.status(422).json({message: 'O tipoReceita é obrigatório!'})
+  }
+  if(!valor) {
+    return res.status(422).json({message: 'O valor é obrigatório!'})
+  }
+  if(!dataEntrada) {
+    return res.status(422).json({message: 'A dataEntrada é obrigatório!'})
+  }
+
+  // cria o usuario
+  const revenues = new Revenues({
+    month: {
+      name: {
+        title: title,
+        listMouth: {
+          tipoReceita,
+          valor,
+          dataEntrada,
+        }
+      }
+    }
+  })
+
+  try {
+    await revenues.save()
+    res.status(201).json({message: 'cadastro realizado com sucesso!'})
+  } catch(error) {
+    res.status(500).json({message: 'Erro no servidor.. tente mais tarde!'})
+  }
+})
+
+app.get("/list/revenues", async(req, res) => {
+  // TODO
+  Revenues.find({}).then((list) => {
+    const {mouth} = req.headers;
+    const showMonth = mouth ? mouth : '';
+    const result = showMonth ? list.filter(item => item.month.name.title.includes(mouth)) : list
+    res.status(200).json({result})
   })
 })
 

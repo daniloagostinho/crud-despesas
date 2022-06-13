@@ -1,14 +1,6 @@
 <div class="container">
-  <div class="row mt-5" >
-    <div class="col-4" *ngFor="let card of cards">
-      <mat-card class="card">
-        <p>{{card.title}}</p>
-        <h1>{{card.value}}</h1>
-      </mat-card>
-    </div>
-  </div>
   <app-card-view>
-    <app-months></app-months>
+    <app-months [typeItem]="'debts'"></app-months>
     <div *ngIf="!emptyResult && !loading">
       <h1>Cadastre suas Dívidas</h1>
       <mat-form-field appearance="standard" class="input-filter">
