@@ -65,8 +65,16 @@ app.get('/download', (req, res) => {
 })
 
 app.get('/', function (req, res) {
-
-  res.send({message: 'Bem vindo a nossa API!'})
+  try {
+    Revenues.find({}).then((list) => {
+      const {mouth} = req.headers;
+      const showMonth = mouth ? mouth : '';
+      const result = showMonth ? list.filter(item => item.month.name.title.includes(mouth)) : list
+      res.status(200).json({result})
+    })
+  } catch(error) {
+    res.send({message: 'Bem vindo a nossa API!' + error.stack})
+  }
 })
 
 
@@ -80,7 +88,16 @@ app.use(express.json())
 
 
 const connect =() => {
-  mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.w65a0yv.mongodb.net/?retryWrites=true&w=majority`)
+
+  mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.w65a0yv.mongodb.net/test?retryWrites=true&w=majority`, {
+  server: {
+    socketOptions: {
+      socketTimeoutMS: 0,
+      connectTimeoutMS: 10000
+    }
+  }
+});
+
   const connection = mongoose.connection;
 
   connection.on('error', () => {console.error("Erro ao se conectar ao mongo")})
