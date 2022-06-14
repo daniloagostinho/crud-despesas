@@ -84,7 +84,6 @@ export class ExpenseComponent implements OnInit {
     this.apiService.userData('token').subscribe((res: any) => {
       if(res) {
         const {_id} = res.user[0];
-        console.log('userData -->> ', res)
         this.getUserInfo(_id);
       }
     }, error => {
@@ -98,6 +97,8 @@ export class ExpenseComponent implements OnInit {
       let arr: any[] = [];
       if(res.result.length === 0) {
         this.emptyResult = true;
+        this.arrDebts = [];
+        this.totalExpense();
       } else {
         this.emptyResult = false;
         this.arrDebts = arr;
@@ -133,34 +134,6 @@ export class ExpenseComponent implements OnInit {
       },
     });
   }
-  // chama função que adiciona objeto ao locastoarge
-  // addLocalStorage(nameItem: string, dataItem?: any) {
-  //   this.setExpense(nameItem, dataItem)
-  // }
-  // adiciona despesa ao locastorage
-  // setExpense(name: string, expense: any) {
-  //   this.localStorage.setLocalStorage(name, JSON.stringify(expense))
-  // }
-
-  // adiciona objeto no array de localstorage e retorarna o array
-  // generateArrayDataLocalstorage(dataItem: any) {
-  //   this.dataLocalStorage.push(dataItem)
-  //   return this.dataLocalStorage;
-  // }
-
-  // salva divida no localstorage
-  // loadLocalstorageDataTable(nameItem: any, dataSourceExpenseModal?: any) {
-  //   let dataSourceLocalstorage = this.localStorage.getLocalStorage(nameItem);
-  //   // se o localstorage não estiver vazio .. eu defino o valor da tabela com o array do localstorage
-  //   if(dataSourceLocalstorage !== null) {
-  //     this.dataSource.data = dataSourceLocalstorage;
-  //     this.dataSource.paginator = this.paginator;
-  //   } else {
-  //     // se estiver vazio eu defino o valor da tabela com os valores do modal..
-  //     this.dataSource.data = dataSourceExpenseModal;
-  //     // this.dataSource.paginator = this.paginator;
-  //   }
-  // }
 
   generateTotalExpenseArray() {
     let total = this.arrDebts.map((total: any) => Number(total.valor))
@@ -181,7 +154,6 @@ export class ExpenseComponent implements OnInit {
   }
 
   applyFilter(event: Event) {
-    console.log(event)
     const filterValues = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValues.trim().toLowerCase();
   }

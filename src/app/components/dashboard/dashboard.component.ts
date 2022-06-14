@@ -17,6 +17,9 @@ export class DashboardComponent implements OnInit {
   titleExpense!: number;
   totalRevenues!: number;
   titleRevenues!: number;
+  debts: any;
+  revenues: any;
+  cardsRevenues: any;
   constructor(private routeActivated: ActivatedRoute,
     private storeService: StoreService) { }
 
@@ -29,32 +32,42 @@ export class DashboardComponent implements OnInit {
 
     this.storeService.getBalancesExpenseTotal().subscribe(res => {
       if(res) {
-        console.log(res.data)
-        this.totalExpense = res.data.total;
-        this.titleRevenues = res.data.title;
+        this.debts =  {
+          title: res.data.title,
+          value: res.data.total
+        }
+
+        const balanceTotal =
+        {
+          title: 'Saldo total',
+          value: 0
+        }
+
+        this.cards = [
+          {...this.debts, }
+        ]
+
+        console.log(this.debts)
+
       }
     })
 
     this.storeService.getRevenuesTotal().subscribe(res => {
       if(res) {
-        this.totalRevenues = res.data.total;
-        this.titleExpense = res.data.title;
+
+        this.revenues =
+        {
+          title: res.data.title,
+          value: res.data.total
+        }
+
+        this.cardsRevenues = [
+          {...this.revenues, }
+        ]
+
+        console.log(this.cards)
       }
     })
-    this.cards = [
-      {
-        title: this.titleExpense ? this.titleExpense : 'Total dívidas',
-        value: this.totalExpense ? this.totalExpense : 0
-      },
-      {
-        title: this.titleRevenues,
-        value: this.totalRevenues
-      },
-      {
-        title: 'Saldo total',
-        value: 0
-      }
-    ]
 
   }
 

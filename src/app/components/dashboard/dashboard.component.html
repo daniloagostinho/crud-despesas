@@ -8,6 +8,14 @@
           <h1>{{card.value | currency: "BRL":true}}</h1>
         </mat-card>
       </div>
+
+      <div class="col-4" *ngFor="let card of cardsRevenues">
+        <mat-card class="card">
+          <p>{{card.title }}</p>
+          <h1>{{card.value | currency: "BRL":true}}</h1>
+        </mat-card>
+      </div>
+
     </div>
   </div>
   <app-expense></app-expense>

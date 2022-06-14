@@ -55,7 +55,6 @@ export class RevenuesComponent implements OnInit {
         // TODO
         this.getRegisterRevenues(this.mouthSelected);
         // this.dataSource.paginator = this.paginator;
-        this.totalExpense();
       }
     });
 
@@ -90,6 +89,8 @@ export class RevenuesComponent implements OnInit {
           let arr: any[] = [];
           if (res.list.length === 0) {
             this.emptyResult = true;
+            this.arrRevenues = [];
+            this.totalExpense();
           } else {
             this.emptyResult = false;
             this.arrRevenues = arr;
@@ -144,6 +145,8 @@ export class RevenuesComponent implements OnInit {
 
       if (res.result.length === 0) {
         this.emptyResult = true;
+        this.arrRevenues = [];
+        this.totalExpense();
       } else {
         this.emptyResult = false;
         this.arrRevenues = arr;
