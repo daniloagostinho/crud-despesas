@@ -55,6 +55,7 @@ export class RevenuesComponent implements OnInit {
         // TODO
         this.getRegisterRevenues(this.mouthSelected);
         // this.dataSource.paginator = this.paginator;
+        this.totalExpense();
       }
     });
 
@@ -116,6 +117,15 @@ export class RevenuesComponent implements OnInit {
   totalExpense() {
     let totalArr = this.generateTotalExpenseArray();
     this.totalRevenues = totalArr.reduce((total, num) => total + num, 0);
+
+    const dataBalanceRevenues = {
+      data: {
+        title: 'Total receitas',
+        total: this.totalRevenues
+      }
+    }
+
+    this.storeService.setRevenuesTotal(dataBalanceRevenues)
   }
 
   defineInitMouth() {

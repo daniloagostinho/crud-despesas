@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Menu } from 'src/app/models/menu.model';
+import { StoreService } from 'src/app/shared/service/store.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,8 +12,13 @@ export class DashboardComponent implements OnInit {
   menu!: Menu[];
   nameClient!: string;
   cards: any[] = [];
-
-  constructor(private routeActivated: ActivatedRoute) { }
+  arrData: any[]  = []
+  totalExpense!: number;
+  titleExpense!: number;
+  totalRevenues!: number;
+  titleRevenues!: number;
+  constructor(private routeActivated: ActivatedRoute,
+    private storeService: StoreService) { }
 
   ngOnInit(): void {
     this.menu = [
@@ -21,14 +27,28 @@ export class DashboardComponent implements OnInit {
     ]
 
 
+    this.storeService.getBalancesExpenseTotal().subscribe(res => {
+      if(res) {
+        console.log(res.data)
+        this.totalExpense = res.data.total;
+        this.titleRevenues = res.data.title;
+      }
+    })
+
+    this.storeService.getRevenuesTotal().subscribe(res => {
+      if(res) {
+        this.totalRevenues = res.data.total;
+        this.titleExpense = res.data.title;
+      }
+    })
     this.cards = [
       {
-        title: 'Total dívidas',
-        value: 0
+        title: this.titleExpense ? this.titleExpense : 'Total dívidas',
+        value: this.totalExpense ? this.totalExpense : 0
       },
       {
-        title: 'Total receitas',
-        value: 0
+        title: this.titleRevenues,
+        value: this.totalRevenues
       },
       {
         title: 'Saldo total',
@@ -36,11 +56,6 @@ export class DashboardComponent implements OnInit {
       }
     ]
 
-    this.routeActivated.params.subscribe(parm => {
-      if(parm['name']) {
-        console.log(parm)
-      }
-    })
   }
 
 }

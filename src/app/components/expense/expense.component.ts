@@ -169,6 +169,15 @@ export class ExpenseComponent implements OnInit {
   totalExpense() {
     let totalArr = this.generateTotalExpenseArray();
     this.total = totalArr.reduce((total, num ) => total + num, 0);
+
+    const dataBalanceExpense= {
+      data: {
+        title: 'Total dívidas',
+        total: this.total
+      }
+    }
+
+    this.store.setBalancesExpenseTotal(dataBalanceExpense)
   }
 
   applyFilter(event: Event) {
