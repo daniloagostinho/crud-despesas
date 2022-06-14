@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { Balances } from 'src/app/models/balances.model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,8 @@ export class StoreService {
   storeMouth = new BehaviorSubject<any>(null)
   searchDebtsByMouth = new BehaviorSubject<boolean>(false)
   searchRevenuesByMouth = new BehaviorSubject<boolean>(false)
+  balancesExpenseTotal = new BehaviorSubject<any>(null)
+  balancesReveuesTotal = new BehaviorSubject<any>(null)
   constructor() { }
 
   getStore() {
@@ -20,11 +23,11 @@ export class StoreService {
     this.store.next(data)
   }
 
-  setStoreRegister(store: boolean) {
+  setStorageRegisterRevenues(store: boolean) {
     this.storeRegister.next(store);
   }
 
-  getStoreRegister() {
+  getStoreRegisterRevenues() {
     return this.storeRegister.asObservable();
   }
 
@@ -50,5 +53,21 @@ export class StoreService {
 
   getSearchRevenuesByMouth() {
     return this.searchRevenuesByMouth.asObservable();
+  }
+
+  setBalancesExpenseTotal(store: any) {
+    this.balancesExpenseTotal.next(store)
+  }
+
+  getBalancesExpenseTotal() {
+    return this.balancesExpenseTotal.asObservable()
+  }
+
+  setRevenuesTotal(store: any) {
+    this.balancesReveuesTotal.next(store)
+  }
+
+  getRevenuesTotal() {
+    return this.balancesReveuesTotal.asObservable();
   }
 }

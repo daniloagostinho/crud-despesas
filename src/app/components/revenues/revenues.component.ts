@@ -31,7 +31,7 @@ export class RevenuesComponent implements OnInit {
     this.getRegisterRevenues(this.mouthSelected);
     this.defineInitMouth();
 
-    this.storeService.getStore().subscribe((res) => {
+    this.storeService.getStoreRegisterRevenues().subscribe((res) => {
       // if(res !== null) {
       //   this.loading = true;
       //   setTimeout(() => {
@@ -55,6 +55,7 @@ export class RevenuesComponent implements OnInit {
         // TODO
         this.getRegisterRevenues(this.mouthSelected);
         // this.dataSource.paginator = this.paginator;
+        this.totalExpense();
       }
     });
 
@@ -80,7 +81,7 @@ export class RevenuesComponent implements OnInit {
   }
 
   initDataSource() {
-    this.storeService.getStoreRegister().subscribe(res => {
+    this.storeService.getStoreRegisterRevenues().subscribe(res => {
       if(res) {
         this.apiService
         .getRegisterRevenues(this.mouthSelected)
@@ -116,6 +117,15 @@ export class RevenuesComponent implements OnInit {
   totalExpense() {
     let totalArr = this.generateTotalExpenseArray();
     this.totalRevenues = totalArr.reduce((total, num) => total + num, 0);
+
+    const dataBalanceRevenues = {
+      data: {
+        title: 'Total receitas',
+        total: this.totalRevenues
+      }
+    }
+
+    this.storeService.setRevenuesTotal(dataBalanceRevenues)
   }
 
   defineInitMouth() {

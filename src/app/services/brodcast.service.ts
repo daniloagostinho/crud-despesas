@@ -17,11 +17,11 @@ export class BrodcastService {
     return this.store.asObservable();
   }
 
-  setStoreRegisterRevenues(store: boolean) {
+  setStorageRegisterRevenues(store: boolean) {
     this.storeRegister.next(store);
   }
 
-  getStoreRegister() {
+  getStoreRegisterRevenues() {
     return this.storeRegister.asObservable();
   }
 }

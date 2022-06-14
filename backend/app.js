@@ -241,7 +241,14 @@ app.post("/auth/login", async(req, res) => {
     return res.status(422).json({message: 'A senha é obrigatório!'})
   }
 
-  const user = await User.findOne({email: email})
+  let user = null;
+
+  try {
+    user = await User.findOne({email: email})
+  } catch(err) {
+    console.log(err)
+    res.send('err --> ', err)
+  }
 
   if(!user) {
     return res.status(404).json({message: 'Usuario não encontrado!'})

@@ -74,7 +74,7 @@ export class AddRevenuesComponent implements OnInit {
 
       this.apiService.registerRevenues(payload).subscribe((res: any) => {
         if(res) {
-          this.storeService.setStoreRegister(true)
+          this.storeService.setStorageRegisterRevenues(true)
         }
       })
     }
