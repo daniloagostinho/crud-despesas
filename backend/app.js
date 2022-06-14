@@ -65,16 +65,7 @@ app.get('/download', (req, res) => {
 })
 
 app.get('/', function (req, res) {
-  try {
-    Revenues.find({}).then((list) => {
-      const {mouth} = req.headers;
-      const showMonth = mouth ? mouth : '';
-      const result = showMonth ? list.filter(item => item.month.name.title.includes(mouth)) : list
-      res.status(200).json({result})
-    })
-  } catch(error) {
-    res.send({message: 'Bem vindo a nossa API!' + error.stack})
-  }
+  res.send({message: 'Bem vindo a nossa API!'})
 })
 
 
