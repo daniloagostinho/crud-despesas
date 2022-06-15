@@ -13,6 +13,7 @@ export class StoreService {
   searchRevenuesByMouth = new BehaviorSubject<boolean>(false)
   balancesExpenseTotal = new BehaviorSubject<any>(null)
   balancesReveuesTotal = new BehaviorSubject<any>(null)
+  balanceTotal = new BehaviorSubject<any>(null)
   constructor() { }
 
   getStore() {
@@ -69,5 +70,13 @@ export class StoreService {
 
   getRevenuesTotal() {
     return this.balancesReveuesTotal.asObservable();
+  }
+
+  setBalanceTotal(store: any) {
+    return this.balanceTotal.next(store);
+  }
+
+  getBalanceTotal() {
+    return this.balanceTotal.asObservable();
   }
 }

@@ -16,6 +16,15 @@
         </mat-card>
       </div>
 
+      <div class="col-4" *ngFor="let card of cardsBalanceTotal">
+        <mat-card class="card" [class.negative]="hasNegative" [class.positive]="hasPositive">
+          <p>{{card.title }}</p>
+           <h1>{{card.value | currency: "BRL":true}}</h1>
+        </mat-card>
+      </div>
+
+
+
     </div>
   </div>
   <app-expense></app-expense>
