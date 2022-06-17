@@ -66,9 +66,10 @@ export class LoginComponent implements OnInit {
       this.apiService.loginUser(payload).subscribe((res: any) => {
         let {token} = res;
         this.addTokenLocalstorage('token', JSON.stringify(token))
+        this.addTokenLocalstorage('user', JSON.stringify(email))
         this.router.navigate(['/dashboard'])
       }, (error: any) => {
-        this.utilsService.openSnackBar(error.error.message)
+        console.log(error)
       })
     }
   }

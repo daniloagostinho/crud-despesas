@@ -31,7 +31,8 @@ export class ExpenseComponent implements OnInit {
   constructor(
     public dialog: MatDialog, private store: StoreService,
     private apiService: ApiService,
-    private utilsService: UtilsService
+    private utilsService: UtilsService,
+    private localStorage: LocalstorageService
   ) {
   }
 
@@ -92,7 +93,8 @@ export class ExpenseComponent implements OnInit {
   }
 
   getRegisterDebts(yearSelected: any) {
-    this.apiService.getRegisterDebts(yearSelected).subscribe((res: any) => {
+    let user = this.localStorage.getLocalStorage('user')
+    this.apiService.getRegisterDebts(yearSelected, user).subscribe((res: any) => {
       this.loading  = true;
       let arr: any[] = [];
       if(res.result.length === 0) {
@@ -104,7 +106,7 @@ export class ExpenseComponent implements OnInit {
         this.arrDebts = arr;
         // this.dataSource.paginator = this.paginator;
         res.result.forEach((element: any) => {
-          arr.push(element.month.name.listMouth)
+          arr.push(element.user.mouth.listMouth)
         })
         this.totalExpense();
       }

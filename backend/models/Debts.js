@@ -1,8 +1,9 @@
 const mongoose = require("mongoose")
 
 const Debts = mongoose.model('Debts', {
-  month: {
-    name: {
+  user: {
+    title: String,
+    mouth: {
       title: String,
       listMouth: {
         despesa: String,

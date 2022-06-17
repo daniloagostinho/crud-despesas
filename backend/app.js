@@ -28,7 +28,7 @@ const upload  = multer({storage})
 var fs = require('fs');
 var FormData = require('form-data');
 
-const app = express();
+var app = express();
 app.use(cors())
 
 app.use(bodyParser.json())
@@ -183,23 +183,26 @@ app.post('/auth/register/user', async(req, res) => {
 app.post('/auth/debts', async(req, res) => {
 
 
-  const title = req.body.name.title;
+  const title = req.body.user.mouth.title;
+  const user = req.body.user.title;
 
-  const {despesa, categoria, valor, dataVencimento} = req.body.name.listMouth;
+  const {despesa, categoria, valor, dataVencimento} = req.body.user.mouth.listMouth;
+
 
   // cria o usuario
   const debts = new Debts({
-    month: {
-      name: {
-        title,
-        listMouth: {
-          despesa,
-          categoria,
-          valor,
-          dataVencimento
+        user: {
+          title: user,
+          mouth: {
+            title,
+            listMouth: {
+              despesa,
+              categoria,
+              valor,
+              dataVencimento
+            }
+          }
         }
-      }
-    }
   })
 
   try {
@@ -213,10 +216,15 @@ app.post('/auth/debts', async(req, res) => {
 app.get("/list/debts", async(req, res) => {
   Debts.find({}).then((list) => {
     const {mouth} = req.headers;
-    const result = mouth ? list.filter(item => item.month.name.title.includes(mouth)) : list
+    const {user} = req.headers;
+
+    const result = mouth ? list.filter(item => user.includes(item.user.title) && item.user.mouth.title.includes(mouth)) : list
+
     res.status(200).json({result})
   })
 })
+
+
 
 // testar depois no angular!!
 app.put("/update/debts/:id", async (req, res) => {
@@ -343,7 +351,7 @@ app.get("/list/revenues", async(req, res) => {
 })
 
 
-// listagem
+// listagem de todos os usuarios
 
 app.get("/list/user", checkToken, async(req, res) => {
   User.find({}, '-password').then((user) => {

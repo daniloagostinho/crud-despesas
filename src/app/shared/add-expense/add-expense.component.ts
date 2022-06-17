@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { ApiService } from 'src/app/services/api.service';
+import { LocalstorageService } from 'src/app/services/localstorage.service';
 import { UtilsService } from 'src/app/services/utils.service';
 import { StoreService } from '../service/store.service';
 
@@ -19,7 +20,8 @@ export class AddExpenseComponent implements OnInit {
     private dialogRef: MatDialogRef<AddExpenseComponent>,
     private apiService: ApiService,
     private storeService: StoreService,
-    private utilsService: UtilsService) { }
+    private utilsService: UtilsService,
+    private localStorage: LocalstorageService) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -61,29 +63,36 @@ export class AddExpenseComponent implements OnInit {
       let categoria = this.form.controls['categoria'].value;
       let valor = this.form.controls['valor'].value;
       let dataVencimento = this.form.controls['dataVencimento'].value;
-
-      const payload = {
-        name: {
-          title: this.mounth,
-          listMouth: {
-            despesa,
-            categoria,
-            valor,
-            dataVencimento
-          }
-        }
-      }
-      this.apiService.registerRegistrationDebts(payload).subscribe(res => {
+      let user = this.localStorage.getLocalStorage('user')
+      this.apiService.userData('token').subscribe(res => {
         if(res) {
-          this.store.setStore(payload);
-          this.utilsService.openSnackBar('Despesa incluída com sucesso!')
+
+          const payload = {
+            user : {
+              title: user,
+              mouth : {
+                title: this.mounth,
+                listMouth: {
+                  despesa,
+                  categoria,
+                  valor,
+                  dataVencimento
+                }
+              }
+            }
+          }
+          this.apiService.registerRegistrationDebts(payload).subscribe(res => {
+            if(res) {
+              this.store.setStore(payload);
+            }
+          })
         }
       })
 
+
+
     }
 
-
-    console.log(this.form)
     this.dialogRef.close();
   }
 
