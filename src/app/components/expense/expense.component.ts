@@ -74,6 +74,7 @@ export class ExpenseComponent implements OnInit {
         })
   }
 
+
   defineInitMouth() {
     let date = new Date();
     let dateString = date.toLocaleDateString("pt-br", {month: "long"});

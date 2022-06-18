@@ -1,8 +1,9 @@
 const mongoose = require("mongoose")
 
 const Revenues = mongoose.model('Revenues', {
-  month: {
-    name: {
+  user: {
+    title: String,
+    mouth: {
       title: String,
       listMouth: {
         tipoReceita: String,

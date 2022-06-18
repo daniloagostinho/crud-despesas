@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { ApiService } from 'src/app/services/api.service';
 import { StoreService } from 'src/app/shared/service/store.service';
+import { LocalstorageService } from 'src/app/services/localstorage.service';
 
 @Component({
   selector: 'app-add-revenues',
@@ -16,7 +17,8 @@ export class AddRevenuesComponent implements OnInit {
   mouth: any;
   constructor(private fb: FormBuilder, private dialogRef: MatDialogRef<AddRevenuesComponent>,
     private apiService: ApiService,
-    private storeService: StoreService) {
+    private storeService: StoreService,
+    private localstorageService: LocalstorageService) {
     this.form = this.fb.group({
       valor: [null, Validators.required],
       tipoReceita: [null, Validators.required],
@@ -27,19 +29,22 @@ export class AddRevenuesComponent implements OnInit {
   ngOnInit(): void {
     this.receitas = [
       {
-        name: 'Casa'
+        name: 'Investimento'
       },
       {
-        name: 'Eletromesticos'
+        name: 'Outros'
       },
       {
-        name: 'Saúde'
+        name: 'Premio'
       },
       {
         name: 'Entretenimento'
       },
       {
-        name: 'Outros'
+        name: 'Presente'
+      },
+      {
+        name: 'Salário'
       }
     ]
 
@@ -58,10 +63,12 @@ export class AddRevenuesComponent implements OnInit {
       let tipoReceita = this.form.controls['tipoReceita'].value;
       let valor = this.form.controls['valor'].value;
       let dataEntrada = this.form.controls['dataEntrada'].value;
+      let user = this.localstorageService.getLocalStorage('user')
 
       const payload = {
-        month: {
-          name: {
+        user: {
+          title: user,
+          mouth: {
             title: this.mouth,
             listMouth: {
               tipoReceita,
@@ -72,7 +79,7 @@ export class AddRevenuesComponent implements OnInit {
         }
       }
 
-      this.apiService.registerRevenues(payload).subscribe((res: any) => {
+      this.apiService.registerRevenues(payload, user).subscribe((res: any) => {
         if(res) {
           this.storeService.setStorageRegisterRevenues(true)
         }

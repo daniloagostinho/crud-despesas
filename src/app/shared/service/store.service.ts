@@ -14,6 +14,8 @@ export class StoreService {
   balancesExpenseTotal = new BehaviorSubject<any>(null)
   balancesReveuesTotal = new BehaviorSubject<any>(null)
   balanceTotal = new BehaviorSubject<any>(null)
+  showPainelTextDebts = new BehaviorSubject<any>(false)
+  showPainelTextRevenues = new BehaviorSubject<any>(null)
   constructor() { }
 
   getStore() {
@@ -79,4 +81,21 @@ export class StoreService {
   getBalanceTotal() {
     return this.balanceTotal.asObservable();
   }
+
+  setShowPainelTextDebts(show: any) {
+    this.showPainelTextDebts.next(show)
+  }
+
+  getShowPainelTextDebts() {
+    return this.showPainelTextDebts.asObservable()
+  }
+
+  setShowPainelTextRevenues(show: any) {
+    this.showPainelTextRevenues.next(show)
+  }
+
+  getShowPainelTextRevenues() {
+    return this.showPainelTextRevenues.asObservable()
+  }
+
 }

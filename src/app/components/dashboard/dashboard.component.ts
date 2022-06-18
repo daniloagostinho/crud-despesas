@@ -23,6 +23,7 @@ export class DashboardComponent implements OnInit, AfterContentChecked {
   cardsBalanceTotal: any;
   balanceTotalMinus: any;
   balanceTotalPlus: any;
+  balanceTotalZero: any;
   totalDebts: any;
   hasNegative: boolean = false;
   hasPositive: boolean = false;
@@ -35,8 +36,6 @@ export class DashboardComponent implements OnInit, AfterContentChecked {
       {name: 'Cadastro de Dívidas'},
       {name: 'Upload de Contas'},
     ]
-
-
 
     this.storeService.getBalancesExpenseTotal().subscribe(res => {
       if(res) {
@@ -103,14 +102,25 @@ export class DashboardComponent implements OnInit, AfterContentChecked {
           this.cardsBalanceTotal = [
             {...this.balanceTotalPlus, }
           ]
-        }
+        } else if(this.totalDebts === 0 && this.totalRevenues === 0) {
+          this.hasNegative = false;
+          this.balanceTotalZero =
+          {
+            title: 'Saldo total',
+            value: 0
+          }
 
+          this.cardsBalanceTotal = [
+            {...this.balanceTotalZero, }
+          ]
+        }
 
       }
 
     })
 
   }
+
 
   ngAfterContentChecked() {
 

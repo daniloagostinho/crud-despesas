@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { ApiService } from 'src/app/services/api.service';
+import { LocalstorageService } from 'src/app/services/localstorage.service';
 import { AddExpenseComponent } from 'src/app/shared/add-expense/add-expense.component';
 import { StoreService } from 'src/app/shared/service/store.service';
 import { AddRevenuesComponent } from '../add-revenues/add-revenues.component';
@@ -20,10 +21,12 @@ export class RevenuesComponent implements OnInit {
   mouthSelected: any;
   arrRevenues: any[] = [];
   totalRevenues!: number;
+  user: any;
   constructor(
     public dialog: MatDialog,
     private apiService: ApiService,
-    private storeService: StoreService
+    private storeService: StoreService,
+    private localStorage: LocalstorageService
   ) {}
 
   ngOnInit(): void {
@@ -81,28 +84,33 @@ export class RevenuesComponent implements OnInit {
 
   initDataSource() {
     this.storeService.getStoreRegisterRevenues().subscribe(res => {
+      this.user = this.localStorage.getLocalStorage('user')
+
       if(res) {
         this.apiService
-        .getRegisterRevenues(this.mouthSelected)
+        .getRegisterRevenues(this.mouthSelected, this.user)
         .subscribe((res: any) => {
           this.loading = true;
           let arr: any[] = [];
-          if (res.list.length === 0) {
+          if (res.result.length === 0) {
+            console.log('caiu no result.lenth')
             this.emptyResult = true;
             this.arrRevenues = [];
             this.totalExpense();
           } else {
+            console.log('caiu no else do  result.lenth')
+
             this.emptyResult = false;
             this.arrRevenues = arr;
             // this.dataSource.paginator = this.paginator;
             res.result.forEach((element: any) => {
-              arr.push(element.month.name.listMouth);
+              arr.push(element.user.mouth.listMouth);
             });
             this.totalExpense();
           }
 
           setTimeout(() => {
-            this.dataSource.data = res.list;
+            this.dataSource.data = res.result.user.mouth.listMouth;
             this.loading = false;
           }, 2000);
         });
@@ -139,7 +147,7 @@ export class RevenuesComponent implements OnInit {
   }
 
   getRegisterRevenues(yearSelected: any) {
-    this.apiService.getRegisterRevenues(yearSelected).subscribe((res: any) => {
+    this.apiService.getRegisterRevenues(yearSelected, this.user).subscribe((res: any) => {
       this.loading = true;
       let arr: any[] = [];
 
@@ -152,7 +160,7 @@ export class RevenuesComponent implements OnInit {
         this.arrRevenues = arr;
         // this.dataSource.paginator = this.paginator;
         res.result.forEach((element: any) => {
-          arr.push(element.month.name.listMouth);
+          arr.push(element.user.mouth.listMouth);
         });
         this.totalExpense();
       }

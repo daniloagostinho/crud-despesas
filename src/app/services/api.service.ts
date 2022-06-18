@@ -32,7 +32,7 @@ export class ApiService {
     return this.httpClient.post(this.urlLocal + '/auth/register/user', user)
   }
 
-  registerRevenues(revenues: any) {
+  registerRevenues(revenues: any, user: any) {
     return this.httpClient.post(this.urlLocal + '/auth/revenues', revenues)
   }
 
@@ -40,9 +40,9 @@ export class ApiService {
     return this.httpClient.post(this.urlLocal + '/auth/debts', debt)
   }
 
-  getRegisterRevenues(param: any) {
+  getRegisterRevenues(param: any, user: any) {
     let headers = new HttpHeaders();
-    headers = headers.set('mouth', param)
+    headers = headers.set('mouth', param).set('user', user)
     return this.httpClient.get(this.urlLocal + '/list/revenues', {headers: headers})
   }
 
