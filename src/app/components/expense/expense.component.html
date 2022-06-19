@@ -53,10 +53,12 @@
         </td>
       </ng-container>
 
-      <ng-container matColumnDef="acao">
+      <ng-container matColumnDef="acoes">
         <th mat-header-cell *matHeaderCellDef>Ações</th>
-        <td mat-cell *ngFor="let img of images">
-          <img [src]="img.src" alt="">
+        <td mat-cell *matCellDef="let element">
+          <div *ngFor="img of element.acoes">
+            <img [src]="img" alt="">
+          </div>
         </td>
       </ng-container>
 

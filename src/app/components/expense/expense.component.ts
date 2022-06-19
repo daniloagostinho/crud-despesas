@@ -17,7 +17,7 @@ import { UtilsService } from 'src/app/services/utils.service';
   styleUrls: ['./expense.component.scss']
 })
 export class ExpenseComponent implements OnInit {
-  displayedColumns: string[] = ['despesa', 'categoria', 'valor', 'dataVencimento', 'acao'];
+  displayedColumns: string[] = ['despesa', 'categoria', 'valor', 'dataVencimento', 'acoes'];
   public dataSource = new MatTableDataSource<any>();
   loading = false;
   dataLocalStorage: any[] = [];

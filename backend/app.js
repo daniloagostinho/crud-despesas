@@ -215,11 +215,34 @@ app.post("/auth/debts", async (req, res) => {
 
 app.get("/list/debts", async (req, res) => {
   Debts.find({}).then((list) => {
+
     const { mouth } = req.headers;
     const { user } = req.headers;
 
+     const novoArr = list.map(el => {
+      return {
+        user: {
+          title: el.user.title,
+          mouth: {
+            title: el.user.mouth.title,
+            listMouth: {
+              despesa: el.user.mouth.listMouth.despesa,
+              valor: el.user.mouth.listMouth.valor,
+              categoria: el.user.mouth.listMouth.categoria,
+              dataVencimento: el.user.mouth.listMouth.dataVencimento,
+              acoes: ['http', 'http']
+            }
+          }
+        }
+      }
+
+     })
+
+     console.log('novoArr -->> ', novoArr)
+
+
     const result = mouth
-      ? list.filter(
+      ? novoArr.filter(
           (item) =>
             user.includes(item.user.title) &&
             item.user.mouth.title.includes(mouth)
