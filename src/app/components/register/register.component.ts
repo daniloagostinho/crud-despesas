@@ -92,7 +92,8 @@ export class RegisterComponent implements OnInit {
         this.utilsService.openSnackBar(res.message)
         this.refreshPage();
       }, error => {
-
+        console.log('error recebido do catherror', error)
+        this.utilsService.openSnackBar(error.error.message)
       })
     }
   }

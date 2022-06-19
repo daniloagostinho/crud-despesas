@@ -1,0 +1,23 @@
+.warn {
+  color: red;
+  margin: 10px;
+}
+
+.center {
+  margin: 10px;
+}
+
+.camera {
+  width: 650px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em;
+}
+.foto {
+  width: 650px;
+  height: 500px;
+  border: 1px solid black;
+  margin: 1em;
+}

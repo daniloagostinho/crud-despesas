@@ -17,12 +17,13 @@ import { UtilsService } from 'src/app/services/utils.service';
   styleUrls: ['./expense.component.scss']
 })
 export class ExpenseComponent implements OnInit {
-  displayedColumns: string[] = ['despesa', 'categoria', 'valor', 'dataVencimento'];
+  displayedColumns: string[] = ['despesa', 'categoria', 'valor', 'dataVencimento', 'acao'];
   public dataSource = new MatTableDataSource<any>();
   loading = false;
   dataLocalStorage: any[] = [];
   total: number = 0;
   pageSize: any[] = [5, 10, 25, 100]
+  images: any[] = [];
   @ViewChild('paginator') paginator!: MatPaginator;
   currentRoute!: string;
   mouthSelected: any;
@@ -41,6 +42,10 @@ export class ExpenseComponent implements OnInit {
     this.getRegisterDebts(this.mouthSelected)
     this.getUserData();
     this.totalExpense();
+    this.images = [
+      {src: "assets/images/update.png"},
+      {src: ''},
+    ]
         // quando abre modal de depsesas
         this.store.getStore().subscribe(res => {
 

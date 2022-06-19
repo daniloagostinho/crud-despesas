@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="d-grid gap-2">
-                  <button class="btn btn-primary" type="button" (click)="login()">ENTRAR</button>
+                  <button class="btn btn-primary" type="button" (click)="login()" [disabled]="formLogin.invalid">ENTRAR</button>
                 </div>
                 <p class="text-custom">Se você ainda não tiver os dados de login, será necessário realizar um cadastro.</p>
               </form>
@@ -43,7 +43,7 @@
 
 
                 <div class="d-grid gap-2">
-                  <button class="btn btn-primary" type="button" (click)="openDialogRegister()">CONTINUAR CADASTRO</button>
+                  <button class="btn btn-primary" type="button" (click)="openDialogRegister()" [disabled]="formRegister.invalid">CONTINUAR CADASTRO</button>
                 </div>
               </form>
             </mat-tab>

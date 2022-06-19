@@ -34,7 +34,6 @@
   </div>
 
   <div class="input-group mb-3">
-    <mat-form-field>
     <input
       type="password"
       class="form-control"
@@ -43,10 +42,10 @@
       aria-describedby="basic-addon1"
       formControlName="confirmPassword"
     />
-    <mat-error *ngIf="form.controls['confirmPassword'].hasError('equalsTo') && form.touched">
-      <p class=""warn>As senhas não são iguais!!</p>
-    </mat-error>
-  </mat-form-field>
+    <br>
+    <div *ngIf="form.controls['confirmPassword'].hasError('equalsTo') && form.touched">
+      <p class="warn">As senhas não são iguais!!</p>
+    </div>
   </div>
 
   <select  class="mt-4" name="selectedOption"  class="form-select" aria-label="Default select example" (change)="selected($any($event.target).value)">
@@ -61,9 +60,11 @@
       <div *ngIf="changeDocument" [formGroupName]="index">
         <div class="row mt-4">
           <div class="col-6">
+            <label for="exampleFormControlSelect1">Número da cnh</label>
+
             <div class="input-group mb-3">
               <input
-                type="password"
+                type="text"
                 class="form-control"
                 id="numero" name="numero"
                 placeholder="numero"
@@ -74,9 +75,10 @@
             </div>
           </div>
           <div class="col-6">
+            <label for="exampleFormControlSelect1">Data de Vencimento</label>
+
             <div class="input-group mb-3">
               <input
-                type="password"
                 class="form-control"
                 id="numero" name="numero"
                 placeholder="Data de emissão"
@@ -97,8 +99,8 @@
   <ng-container formArrayName="cpf">
     <ng-container *ngFor="let cpf of cpf.controls; let index = index">
       <div *ngIf="!changeDocument" [formGroupName]="index">
-        <div class="col-6">
-          <div class="input-group mb-3">
+        <div class="col-12">
+          <div class="input-group mb-3 mt-3">
             <input
               type="number"
               class="form-control"
@@ -113,6 +115,18 @@
       </div>
     </ng-container>
   </ng-container>
+
+  <div class="input-group center mb-3">
+    <label for="exampleFormControlSelect1">Tire uma foto</label>
+
+    <div class="camera">
+      <video id="video" class="foto" autoplay>Vídeo não disponível.</video>
+      <canvas id="canvas" class="foto" style="display: none;"></canvas>
+      <button id="tira-foto">Tirar foto</button>
+    </div>
+
+  </div>
+
   <div class="d-grid gap-2 mt-4">
     <button class="btn btn-primary" type="button" (click)="submit()">FINALIZAR CADASTRO</button>
   </div>

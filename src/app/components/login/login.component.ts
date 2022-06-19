@@ -47,6 +47,8 @@ export class LoginComponent implements OnInit {
     this.dialog.open(RegisterComponent, {
       width: '900px',
       disableClose: true,
+      autoFocus: false,
+      maxHeight: '90vh',
       data: {
         data: dataDialog,
       },
