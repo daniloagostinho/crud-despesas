@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ApiService } from 'src/app/services/api.service';
 import { LocalstorageService } from 'src/app/services/localstorage.service';
 import { UtilsService } from 'src/app/services/utils.service';
@@ -21,7 +21,8 @@ export class AddExpenseComponent implements OnInit {
     private apiService: ApiService,
     private storeService: StoreService,
     private utilsService: UtilsService,
-    private localStorage: LocalstorageService) { }
+    private localStorage: LocalstorageService,
+    @Inject(MAT_DIALOG_DATA) public data: any,) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -30,6 +31,9 @@ export class AddExpenseComponent implements OnInit {
       valor: [null, Validators.required],
       dataVencimento: [null, Validators.required]
     })
+
+    this.fillData();
+
 
     this.categorias = [
       {
@@ -52,6 +56,18 @@ export class AddExpenseComponent implements OnInit {
     this.storeService.getStoreMouth().subscribe(res => {
       this.mounth = res;
     })
+  }
+
+  fillData() {
+    console.log(this.data)
+    if(this.data) {
+      this.form.patchValue({
+        despesa: this.data.data.despesa,
+        categoria: this.data.data.categoria,
+        valor: this.data.data.valor,
+        dataVencimento: this.data.data.dataVencimento
+      })
+    }
   }
   submit() {
     this.form.patchValue({

@@ -135,11 +135,7 @@ export class ExpenseComponent implements OnInit {
 
   openDialog() {
     this.dialog.open(AddExpenseComponent, {
-      width: '900px',
-      disableClose: true,
-      data: {
-        any: '',
-      },
+      width: '900px'
     });
   }
 
@@ -166,4 +162,21 @@ export class ExpenseComponent implements OnInit {
     this.dataSource.filter = filterValues.trim().toLowerCase();
   }
 
+  selectAction(action: any, element: any) {
+
+    if(action.indexOf("edit.png") != -1) {
+    let user = this.localStorage.getLocalStorage('user')
+
+      this.apiService.getRegisterDebts(this.mouthSelected, user).subscribe((res: any) => {
+        if(res) {
+          this.dialog.open(AddExpenseComponent, {
+            width: '900px',
+            data: {
+              data: element,
+            },
+          });
+        }
+      })
+    }
+  }
 }

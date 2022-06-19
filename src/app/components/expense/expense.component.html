@@ -56,8 +56,8 @@
       <ng-container matColumnDef="acoes">
         <th mat-header-cell *matHeaderCellDef>Ações</th>
         <td mat-cell *matCellDef="let element">
-          <div *ngFor="img of element.acoes">
-            <img [src]="img" alt="">
+          <div *ngFor="let img of element.acoes; let i = index">
+            <img class="image" (click)="selectAction(img, element)" [src]="img" alt="">
           </div>
         </td>
       </ng-container>

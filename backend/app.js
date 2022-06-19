@@ -230,7 +230,7 @@ app.get("/list/debts", async (req, res) => {
               valor: el.user.mouth.listMouth.valor,
               categoria: el.user.mouth.listMouth.categoria,
               dataVencimento: el.user.mouth.listMouth.dataVencimento,
-              acoes: ['http', 'http']
+              acoes: ['https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png', 'https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png']
             }
           }
         }
