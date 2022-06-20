@@ -45,6 +45,10 @@ export class ApiService {
     return this.httpClient.post(this.url + '/auth/debts', debt)
   }
 
+  updateDebts(id: any, payload: any) {
+    return this.httpClient.put(this.url + '/update/debts/' + id, payload );
+  }
+
   getRegisterRevenues(param: any, user: any) {
     let headers = new HttpHeaders();
     headers = headers.set('mouth', param).set('user', user)

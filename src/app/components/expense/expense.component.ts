@@ -17,7 +17,7 @@ import { UtilsService } from 'src/app/services/utils.service';
   styleUrls: ['./expense.component.scss']
 })
 export class ExpenseComponent implements OnInit {
-  displayedColumns: string[] = ['despesa', 'categoria', 'valor', 'dataVencimento', 'acoes'];
+  displayedColumns: string[] = ['despesa', 'categoria', 'valor', 'dataVencimento', '_id', 'acoes'];
   public dataSource = new MatTableDataSource<any>();
   loading = false;
   dataLocalStorage: any[] = [];
@@ -114,6 +114,7 @@ export class ExpenseComponent implements OnInit {
         res.result.forEach((element: any) => {
           arr.push(element.user.mouth.listMouth)
         })
+
         this.totalExpense();
       }
 

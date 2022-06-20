@@ -216,6 +216,7 @@ app.post("/auth/debts", async (req, res) => {
 app.get("/list/debts", async (req, res) => {
   Debts.find({}).then((list) => {
 
+
     const { mouth } = req.headers;
     const { user } = req.headers;
 
@@ -226,6 +227,7 @@ app.get("/list/debts", async (req, res) => {
           mouth: {
             title: el.user.mouth.title,
             listMouth: {
+              _id: el._id.toString(),
               despesa: el.user.mouth.listMouth.despesa,
               valor: el.user.mouth.listMouth.valor,
               categoria: el.user.mouth.listMouth.categoria,
@@ -238,7 +240,8 @@ app.get("/list/debts", async (req, res) => {
 
      })
 
-     console.log('novoArr -->> ', novoArr)
+
+    console.log('novoarr -->> ', novoArr)
 
 
     const result = mouth
