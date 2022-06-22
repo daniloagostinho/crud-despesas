@@ -32,8 +32,6 @@ export class AddExpenseComponent implements OnInit {
       dataVencimento: [null, Validators.required]
     })
 
-    this.fillData();
-
 
     this.categorias = [
       {
@@ -58,18 +56,7 @@ export class AddExpenseComponent implements OnInit {
     })
   }
 
-  fillData() {
-    console.log(this.data)
-    if(this.data) {
 
-      this.form.patchValue({
-        despesa: this.data.data.despesa,
-        categoria: this.data.data.categoria,
-        valor: this.data.data.valor,
-        dataVencimento: this.data.data.dataVencimento
-      })
-    }
-  }
   submit() {
     this.form.patchValue({
       categoria: this.categoriaModel
@@ -105,23 +92,6 @@ export class AddExpenseComponent implements OnInit {
           })
         }
       })
-
-
-      if(this.data) {
-        const payload = {
-          despesa: this.form.controls['despesa'].value,
-          categoria: this.form.controls['categoria'].value,
-          valor: this.form.controls['valor'].value,
-          dataVencimento: this.form.controls['dataVencimento'].value
-        }
-
-        this.apiService.updateDebts(this.data.data._id, payload).subscribe(res=> {
-          if(res) {
-            console.log(res)
-          }
-        })
-      }
-
 
     }
 

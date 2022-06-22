@@ -10,6 +10,7 @@ import { StoreService } from 'src/app/shared/service/store.service';
 import { Router  } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 import { UtilsService } from 'src/app/services/utils.service';
+import { UpdateExpenseComponent } from '../update-expense/update-expense.component';
 
 @Component({
   selector: 'app-expense',
@@ -166,18 +167,25 @@ export class ExpenseComponent implements OnInit {
   selectAction(action: any, element: any) {
 
     if(action.indexOf("edit.png") != -1) {
-    let user = this.localStorage.getLocalStorage('user')
-
-      this.apiService.getRegisterDebts(this.mouthSelected, user).subscribe((res: any) => {
-        if(res) {
-          this.dialog.open(AddExpenseComponent, {
-            width: '900px',
-            data: {
-              data: element,
-            },
-          });
+      this.dialog.open(UpdateExpenseComponent, {
+        width: '900px',
+        data: {
+          data: element
         }
-      })
+      });
+    } else {
+      // clicou no icone de deletar
+      const question = confirm('Tem certeza que deseja excluir essa Dívida?');
+      if(question) {
+        this.apiService.deleteDebts(element._id).subscribe(res => {
+          if(res) {
+            this.store.setStore(true);
+          }
+        })
+      } else {
+        return;
+      }
+
     }
   }
 }

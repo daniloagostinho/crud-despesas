@@ -27,6 +27,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AddRevenuesComponent } from './components/add-revenues/add-revenues.component';
 import { MonthsComponent } from './components/months/months.component';
+import { UpdateExpenseComponent } from './components/update-expense/update-expense.component';
 
 registerLocaleData(localePt, 'pt');
 
@@ -46,7 +47,8 @@ registerLocaleData(localePt, 'pt');
     RegisterComponent,
     DashboardComponent,
     AddRevenuesComponent,
-    MonthsComponent
+    MonthsComponent,
+    UpdateExpenseComponent
   ],
   imports: [
     BrowserModule,
