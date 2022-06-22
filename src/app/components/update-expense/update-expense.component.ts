@@ -59,9 +59,8 @@ export class UpdateExpenseComponent implements OnInit {
   }
 
   fillData() {
-    console.log(this.data)
     if(this.data) {
-
+      this.categoriaSelect = this.data.data.categoria;
       this.form.patchValue({
         despesa: this.data.data.despesa,
         categoria: this.data.data.categoria,
@@ -72,12 +71,17 @@ export class UpdateExpenseComponent implements OnInit {
   }
 
   submit() {
+
     this.form.patchValue({
       categoria: this.categoriaModel,
     });
-
+    const categoriaInput  = this.form.get('categoria')!.value;
+    if(!categoriaInput) {
+      this.form.patchValue({
+        categoria: this.categoriaSelect,
+      });
+    }
     if (this.form.valid) {
-      this.categoriaSelect = this.data.data.categoria;
       let user = this.localStorage.getLocalStorage('user')
 
       const payload = {
