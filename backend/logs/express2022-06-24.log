@@ -1,0 +1,166 @@
+
+Request: GET /list/debts at Fri Jun 24 2022 11:05:28 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 66.343 ms 
+
+Request: GET /list/user at Fri Jun 24 2022 11:05:28 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 200 178.057 ms 
+
+Request: GET /list/revenues at Fri Jun 24 2022 11:05:28 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 176.841 ms 
+
+Request: GET /list/debts at Fri Jun 24 2022 11:05:28 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 221.131 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Fri Jun 24 2022 11:05:28 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 200 98.548 ms 
+
+Request: GET /list/debts at Fri Jun 24 2022 12:46:03 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 37.510 ms 
+
+Request: GET /list/revenues at Fri Jun 24 2022 12:46:03 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 152.759 ms 
+
+Request: GET /list/user at Fri Jun 24 2022 12:46:03 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 156.661 ms 
+
+Request: GET /list/debts at Fri Jun 24 2022 12:46:03 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 224.913 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Fri Jun 24 2022 12:46:03 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 94.375 ms 

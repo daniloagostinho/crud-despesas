@@ -6,6 +6,7 @@ import { LocalstorageService } from 'src/app/services/localstorage.service';
 import { AddExpenseComponent } from 'src/app/shared/add-expense/add-expense.component';
 import { StoreService } from 'src/app/shared/service/store.service';
 import { AddRevenuesComponent } from '../add-revenues/add-revenues.component';
+import { UpdateRevenuesComponent } from '../update-revenues/update-revenues.component';
 
 @Component({
   selector: 'app-revenues',
@@ -13,7 +14,7 @@ import { AddRevenuesComponent } from '../add-revenues/add-revenues.component';
   styleUrls: ['./revenues.component.scss'],
 })
 export class RevenuesComponent implements OnInit {
-  displayedColumns: string[] = ['tipoReceita', 'valor', 'dataEntrada'];
+  displayedColumns: string[] = ['tipoReceita', 'valor', 'dataEntrada', '_id', 'acoes'];
   public dataSource = new MatTableDataSource<any>();
   pageSize: any[] = [5, 10, 25, 100];
   loading = false;
@@ -22,6 +23,7 @@ export class RevenuesComponent implements OnInit {
   arrRevenues: any[] = [];
   totalRevenues!: number;
   user: any;
+  change!: boolean;
   constructor(
     public dialog: MatDialog,
     private apiService: ApiService,
@@ -170,5 +172,30 @@ export class RevenuesComponent implements OnInit {
         this.loading = false;
       }, 2000);
     });
+  }
+
+  selectAction(action: any, element: any) {
+
+    if(action.indexOf("edit.png") != -1) {
+      this.dialog.open(UpdateRevenuesComponent, {
+        width: '900px',
+        data: {
+          data: element
+        }
+      });
+    } else {
+      // clicou no icone de deletar
+      const question = confirm('Tem certeza que deseja excluir essa Dívida?');
+      if(question) {
+        this.apiService.deleteDebts(element._id).subscribe(res => {
+          if(res) {
+            this.storeService.setStore(true);
+          }
+        })
+      } else {
+        return;
+      }
+
+    }
   }
 }

@@ -28,6 +28,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AddRevenuesComponent } from './components/add-revenues/add-revenues.component';
 import { MonthsComponent } from './components/months/months.component';
 import { UpdateExpenseComponent } from './components/update-expense/update-expense.component';
+import { MonthsRevenuesComponent } from './components/months-revenues/months-revenues.component';
+import { UpdateRevenuesComponent } from './components/update-revenues/update-revenues.component';
 
 registerLocaleData(localePt, 'pt');
 
@@ -48,7 +50,9 @@ registerLocaleData(localePt, 'pt');
     DashboardComponent,
     AddRevenuesComponent,
     MonthsComponent,
-    UpdateExpenseComponent
+    UpdateExpenseComponent,
+    MonthsRevenuesComponent,
+    UpdateRevenuesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,4731 @@
+
+Request: POST /auth/login at Mon Jun 27 2022 10:39:43 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Request Body:
+{
+	"email": "danilo@gmail.com",
+	"password": "091011"
+}
+Response Body:
+{
+	"message": "Autenticação realizada com sucesso!",
+	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYjRjNDQ3NzhmMGIzNjliMDI2MTU1NSIsImlhdCI6MTY1NjMzNzE4M30.41l7Rtbt7B1UWn_e5K27Mv9sAhsV1Zb6hUC7YB6qWUU"
+}
+Response: 200 387.725 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:39:43 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 57.699 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 10:39:43 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 174.290 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:39:43 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 176.877 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:39:43 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 233.123 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 10:39:43 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 105.491 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:39:47 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 32.524 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:39:47 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 39.155 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:39:51 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 46.735 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:39:51 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 51.207 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:39:55 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 41.612 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:39:55 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 45.236 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:39:55 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 48.175 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:39:55 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 51.985 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:39:55 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 19.097 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:39:55 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 62.570 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:39:55 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 62.347 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:39:55 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 78.785 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:41:31 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 23.130 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:41:31 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 39.365 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 10:41:31 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 40.512 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:41:31 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 25.048 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 10:41:31 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 16.706 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:41:35 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 29.472 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:41:35 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 31.155 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:41:38 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 31.957 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:41:38 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 33.197 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:41:41 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 43.170 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:41:41 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 47.888 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:41:46 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 42.725 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:41:46 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 44.519 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:42:17 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 30.450 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 10:42:17 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 30.419 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:42:17 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 33.571 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:42:17 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 28.738 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 10:42:18 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 16.264 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:43:10 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 28.834 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:43:10 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 32.000 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 10:43:10 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 35.328 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:43:10 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 28.341 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 10:43:10 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 15.794 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:43:25 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 53.927 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:43:25 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 55.060 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 10:43:25 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 59.149 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:43:25 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 34.230 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 10:43:25 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 22.234 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:43:40 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 27.932 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 10:43:40 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 27.184 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:43:40 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 27.430 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:43:40 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 26.406 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 10:43:40 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 15.523 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:43:45 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 47.547 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:43:45 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 48.488 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 10:43:45 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 51.452 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:43:45 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 30.466 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 10:43:45 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 15.772 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 10:44:33 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 16.577 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:44:33 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 33.410 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:44:33 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 37.943 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:44:33 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 31.173 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 10:44:33 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 16.153 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 10:44:51 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 15.367 ms 
+
+Request: POST /auth/debts at Mon Jun 27 2022 10:44:51 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Request Body:
+{
+	"user": {
+		"title": "danilo@gmail.com",
+		"mouth": {
+			"title": "Junho",
+			"listMouth": {
+				"despesa": "Luz",
+				"categoria": "Casa",
+				"valor": 100,
+				"dataVencimento": "2022-06-30"
+			}
+		}
+	}
+}
+Response Body:
+{
+	"message": "cadastro realizado com sucesso!"
+}
+Response: 201 32.021 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:44:51 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9b4533eccf060c4c7f0ad",
+						"despesa": "Luz",
+						"valor": "100",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-30",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 31.089 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:45:01 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 17.785 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:45:01 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 50.232 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:45:07 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9b4533eccf060c4c7f0ad",
+						"despesa": "Luz",
+						"valor": "100",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-30",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 31.782 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:45:07 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 36.383 ms 
+
+Request: PUT /update/debts/62b9b4533eccf060c4c7f0ad at Mon Jun 27 2022 10:45:19 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Request Body:
+{
+	"user": {
+		"title": "danilo@gmail.com",
+		"mouth": {
+			"title": "Junho",
+			"listMouth": {
+				"despesa": "Luz",
+				"categoria": "Casa",
+				"valor": 200,
+				"dataVencimento": "2022-06-30"
+			}
+		}
+	}
+}
+Response Body:
+{
+	"user": {
+		"mouth": {
+			"listMouth": {
+				"despesa": "Luz",
+				"categoria": "Casa",
+				"valor": "200",
+				"dataVencimento": "2022-06-30"
+			},
+			"title": "Junho"
+		},
+		"title": "danilo@gmail.com"
+	},
+	"_id": "62b9b4533eccf060c4c7f0ad",
+	"__v": 0
+}
+Response: 200 38.646 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:45:19 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9b4533eccf060c4c7f0ad",
+						"despesa": "Luz",
+						"valor": "200",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-30",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 39.811 ms 
+
+Request: DELETE /delete/debts/62b9b4533eccf060c4c7f0ad at Mon Jun 27 2022 10:45:25 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"mouth": {
+			"listMouth": {
+				"despesa": "Luz",
+				"categoria": "Casa",
+				"valor": "200",
+				"dataVencimento": "2022-06-30"
+			},
+			"title": "Junho"
+		},
+		"title": "danilo@gmail.com"
+	},
+	"_id": "62b9b4533eccf060c4c7f0ad",
+	"__v": 0
+}
+Response: 200 28.141 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:45:25 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 43.234 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:59:12 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 31.902 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:59:12 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 33.065 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 10:59:12 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 37.585 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:59:12 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 39.343 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 10:59:12 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 16.628 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:59:45 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 28.739 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 10:59:45 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 29.104 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:59:45 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 27.270 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 10:59:45 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 28.696 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 10:59:45 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 15.048 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 10:59:50 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 17.915 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:00:53 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 22.055 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:00:57 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 16.724 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:04:19 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 26.328 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 11:04:19 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 26.219 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:04:19 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 22.412 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:04:19 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 33.243 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 11:04:19 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 17.239 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:05:20 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 31.227 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 11:05:20 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 33.116 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:05:20 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 35.305 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:05:20 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 27.951 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 11:05:20 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 21.242 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:05:27 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 17.354 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:05:27 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 28.259 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:05:27 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 30.106 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:05:28 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 165.780 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:05:28 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 165.480 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:05:28 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 171.444 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:05:28 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 162.377 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:05:28 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 242.330 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:05:28 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 244.470 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:05:28 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 104.006 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:06:00 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 30.369 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 11:06:00 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 200 30.485 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:06:00 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 42.931 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:06:00 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 41.208 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 11:06:00 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 200 16.551 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:06:31 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 27.747 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 11:06:31 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 200 28.827 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:06:31 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 38.940 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:06:31 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 34.285 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 11:06:31 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 200 16.362 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:06:37 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 16.258 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:06:41 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 17.277 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:06:45 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 20.107 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:06:45 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 31.648 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:06:47 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 24.498 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:06:47 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 25.604 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:06:50 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 28.899 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:06:50 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 31.653 ms 
+
+Request: POST /auth/revenues at Mon Jun 27 2022 11:07:44 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Request Body:
+{
+	"user": {
+		"title": "danilo@gmail.com",
+		"mouth": {
+			"title": "Julho",
+			"listMouth": {
+				"tipoReceita": "Salário",
+				"valor": 1000,
+				"dataEntrada": "2022-06-27"
+			}
+		}
+	}
+}
+Response Body:
+{
+	"message": "cadastro realizado com sucesso!"
+}
+Response: 201 33.120 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:07:44 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"mouth": {
+					"listMouth": {
+						"tipoReceita": "Salário",
+						"valor": "1000",
+						"dataEntrada": "2022-06-27"
+					},
+					"title": "Julho"
+				},
+				"title": "danilo@gmail.com"
+			},
+			"_id": "62b9b9b03eccf060c4c7f0ae",
+			"__v": 0
+		}
+	]
+}
+Response: 200 19.166 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:07:44 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"mouth": {
+					"listMouth": {
+						"tipoReceita": "Salário",
+						"valor": "1000",
+						"dataEntrada": "2022-06-27"
+					},
+					"title": "Julho"
+				},
+				"title": "danilo@gmail.com"
+			},
+			"_id": "62b9b9b03eccf060c4c7f0ae",
+			"__v": 0
+		}
+	]
+}
+Response: 304 20.679 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:14:27 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 59.909 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 11:14:27 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 204.803 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:14:27 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 213.715 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 11:14:27 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 70.905 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:14:27 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 275.667 ms 
+
+Request: POST /auth/revenues at Mon Jun 27 2022 11:14:50 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Request Body:
+{
+	"user": {
+		"title": "danilo@gmail.com",
+		"mouth": {
+			"title": "Junho",
+			"listMouth": {
+				"tipoReceita": "Salário",
+				"valor": 5000,
+				"dataEntrada": "2022-06-27"
+			}
+		}
+	}
+}
+Response Body:
+{
+	"message": "cadastro realizado com sucesso!"
+}
+Response: 201 32.010 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:14:50 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 24.114 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:14:50 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 26.011 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 11:16:11 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 64.521 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:16:11 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 84.433 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:16:11 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 304 89.035 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:16:11 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 39.676 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 11:16:11 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 28.055 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:16:36 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 36.566 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 11:16:36 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 37.521 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:16:36 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 304 41.098 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:16:36 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 36.776 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 11:16:36 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 16.649 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 11:17:18 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 20.858 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:17:18 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 45.041 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:17:18 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 304 47.821 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:17:18 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 304 35.515 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 11:17:18 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 29.933 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 11:17:47 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 16.490 ms 
+
+Request: POST /auth/debts at Mon Jun 27 2022 11:17:47 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Request Body:
+{
+	"user": {
+		"title": "danilo@gmail.com",
+		"mouth": {
+			"title": "Junho",
+			"listMouth": {
+				"despesa": "Gas",
+				"categoria": "Casa",
+				"valor": 80,
+				"dataVencimento": "2022-06-28"
+			}
+		}
+	}
+}
+Response Body:
+{
+	"message": "cadastro realizado com sucesso!"
+}
+Response: 201 24.961 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:17:47 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 39.231 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:42:51 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 304 215.682 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 11:42:51 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 220.608 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:42:51 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 304 221.586 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:42:52 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 304 228.218 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 11:42:52 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 203.896 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:48:57 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 304 36.910 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:48:57 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 304 38.421 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 11:48:57 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 42.586 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:48:58 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 304 36.351 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 11:48:58 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 16.225 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:49:39 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 29.179 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 11:49:39 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 200 28.230 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:49:39 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 41.015 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:49:40 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 174.160 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 11:49:40 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 200 14.916 ms 
+
+Request: DELETE /delete/debts/undefined at Mon Jun 27 2022 11:50:10 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+Cast to ObjectId failed for value "undefined" at path "_id" for model "Debts"
+Response: 500 2.916 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:51:39 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 304 91.832 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 11:51:39 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 304 244.320 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:51:39 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 304 247.505 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:51:39 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 304 323.558 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 11:51:39 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 304 144.478 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:55:00 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 50.399 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 11:55:00 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 200 52.070 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:55:00 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 77.954 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:55:00 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 199.846 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 11:55:00 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 200 56.720 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:56:04 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 60.410 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 11:56:04 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 200 157.440 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:56:04 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 173.528 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:56:04 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"_id": "62b9bb5a616a357cd4d3882f",
+					"title": "Junho",
+					"listMouth": {
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 259.085 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 11:56:04 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 200 77.063 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:57:06 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 75.571 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 11:57:06 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 200 182.577 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 11:57:06 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 196.442 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 11:57:06 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 200 78.230 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 11:57:06 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bb5a616a357cd4d3882f",
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 285.159 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 16:30:16 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 63.130 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 16:30:16 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 189.970 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 16:30:16 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 200 190.003 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 16:30:16 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bb5a616a357cd4d3882f",
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 298.611 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 16:30:16 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 200 64.353 ms 
+
+Request: PUT /update/reveues/62b9bb5a616a357cd4d3882f at Mon Jun 27 2022 16:30:45 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Request Body:
+{
+	"user": {
+		"title": "danilo@gmail.com",
+		"mouth": {
+			"title": "Junho",
+			"listMouth": {
+				"tipoReceita": "Presente",
+				"valor": 900,
+				"dataEntrada": "2022-06-27"
+			}
+		}
+	}
+}
+Response: 404 1.373 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 16:32:03 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 45.472 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 16:32:03 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 200 46.440 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 16:32:03 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 67.202 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 16:32:03 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bb5a616a357cd4d3882f",
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 195.386 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 16:32:03 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 200 67.640 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 16:35:09 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 29.559 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 16:35:09 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 200 28.685 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 16:35:09 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bb5a616a357cd4d3882f",
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 26.317 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 16:35:09 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 53.070 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 16:35:09 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 200 15.231 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 17:23:31 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 200 34.534 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 17:23:31 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 80.341 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 17:23:31 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 234.660 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 17:23:31 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bb5a616a357cd4d3882f",
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 240.569 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 17:23:31 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 200 25.149 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 17:25:56 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 24.069 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 17:25:56 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 200 22.515 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 17:25:56 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 47.289 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 17:25:56 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 200 171.870 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 17:25:56 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bb5a616a357cd4d3882f",
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 400.449 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 17:26:05 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 32.582 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 17:26:05 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 200 32.924 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 17:26:05 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 51.546 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 17:26:05 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bb5a616a357cd4d3882f",
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 53.114 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 17:26:05 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 200 25.119 ms 
+
+Request: POST /auth/revenues at Mon Jun 27 2022 17:28:01 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Request Body:
+{
+	"user": {
+		"title": "danilo@gmail.com",
+		"mouth": {
+			"title": "Junho",
+			"listMouth": {
+				"tipoReceita": "Presente",
+				"valor": 200,
+				"dataEntrada": "2022-06-10"
+			}
+		}
+	}
+}
+Response Body:
+{
+	"message": "cadastro realizado com sucesso!"
+}
+Response: 201 41.627 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 17:28:01 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bb5a616a357cd4d3882f",
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		},
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62ba12d1028f876ee0bc29eb",
+						"tipoReceita": "Presente",
+						"valor": "200",
+						"dataEntrada": "2022-06-10",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+
+...
+Response: 200 17.169 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 17:28:01 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bb5a616a357cd4d3882f",
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		},
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62ba12d1028f876ee0bc29eb",
+						"tipoReceita": "Presente",
+						"valor": "200",
+						"dataEntrada": "2022-06-10",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+
+...
+Response: 200 20.846 ms 
+
+Request: DELETE /delete/debts/62ba12d1028f876ee0bc29eb at Mon Jun 27 2022 17:30:04 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+null
+Response: 200 26.230 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 17:46:28 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 200 17.165 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 17:46:28 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 44.199 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 17:46:28 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 55.433 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 17:46:28 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bb5a616a357cd4d3882f",
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		},
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62ba12d1028f876ee0bc29eb",
+						"tipoReceita": "Presente",
+						"valor": "200",
+						"dataEntrada": "2022-06-10",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+
+...
+Response: 200 59.605 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 17:46:29 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 200 16.265 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 17:47:05 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 37.404 ms 
+
+Request: GET /list/user at Mon Jun 27 2022 17:47:05 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		}
+	]
+}
+Response: 200 35.619 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 17:47:05 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 56.292 ms 
+
+Request: GET /list/revenues at Mon Jun 27 2022 17:47:05 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bb5a616a357cd4d3882f",
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		},
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62ba12d1028f876ee0bc29eb",
+						"tipoReceita": "Presente",
+						"valor": "200",
+						"dataEntrada": "2022-06-10",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+
+...
+Response: 200 22.112 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Mon Jun 27 2022 17:47:05 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 200 17.262 ms 
+
+Request: PUT /update/revenues/62ba12d1028f876ee0bc29eb at Mon Jun 27 2022 17:47:22 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Request Body:
+{
+	"user": {
+		"title": "danilo@gmail.com",
+		"mouth": {
+			"title": "Junho",
+			"listMouth": {
+				"tipoReceita": "Presente",
+				"valor": 300,
+				"dataEntrada": "2022-06-10"
+			}
+		}
+	}
+}
+Response Body:
+null
+Response: 200 21.647 ms 
+
+Request: PUT /update/revenues/62ba12d1028f876ee0bc29eb at Mon Jun 27 2022 17:49:23 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Request Body:
+{
+	"user": {
+		"title": "danilo@gmail.com",
+		"mouth": {
+			"title": "Junho",
+			"listMouth": {
+				"tipoReceita": "Presente",
+				"valor": 300,
+				"dataEntrada": "2022-06-10"
+			}
+		}
+	}
+}
+Response Body:
+{
+	"user": null
+}
+Response: 200 28.619 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 17:49:23 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 41.273 ms 
+
+Request: PUT /update/revenues/62ba12d1028f876ee0bc29eb at Mon Jun 27 2022 17:50:34 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Request Body:
+{
+	"user": {
+		"title": "danilo@gmail.com",
+		"mouth": {
+			"title": "Junho",
+			"listMouth": {
+				"tipoReceita": "Presente",
+				"valor": 300,
+				"dataEntrada": "2022-06-10"
+			}
+		}
+	}
+}
+Response Body:
+{
+	"user": {
+		"user": {
+			"mouth": {
+				"listMouth": {
+					"tipoReceita": "Presente",
+					"valor": "300",
+					"dataEntrada": "2022-06-10"
+				},
+				"title": "Junho"
+			},
+			"title": "danilo@gmail.com"
+		},
+		"_id": "62ba12d1028f876ee0bc29eb",
+		"__v": 0
+	}
+}
+Response: 200 44.968 ms 
+
+Request: GET /list/debts at Mon Jun 27 2022 17:50:34 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 48.581 ms 

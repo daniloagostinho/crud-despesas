@@ -1,0 +1,7 @@
+
+Request: GET / at Thu Jun 23 2022 10:22:05 GMT-0300, IP: ::1, User Agent: PostmanRuntime/7.29.0
+Response Body:
+{
+	"message": "Bem vindo a nossa API!"
+}
+Response: 200 1.420 ms 

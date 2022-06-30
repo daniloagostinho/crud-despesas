@@ -1,0 +1,275 @@
+
+Request: POST /auth/login at Thu Jun 30 2022 18:23:38 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Request Body:
+{
+	"email": "danilo@gmail.com",
+	"password": "091011"
+}
+Response Body:
+{
+	"message": "Autenticação realizada com sucesso!",
+	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYjRjNDQ3NzhmMGIzNjliMDI2MTU1NSIsImlhdCI6MTY1NjYyNDIxOH0.XurY21pnjQRP9vyyUuLKR9r0HtKEeZN8yIuiAr7Sarc"
+}
+Response: 200 468.937 ms 
+
+Request: GET /list/debts at Thu Jun 30 2022 18:23:38 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 47.757 ms 
+
+Request: GET /list/revenues at Thu Jun 30 2022 18:23:38 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bb5a616a357cd4d3882f",
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		},
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62ba12d1028f876ee0bc29eb",
+						"tipoReceita": "Presente",
+						"valor": "300",
+						"dataEntrada": "2022-06-10",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+
+...
+Response: 200 165.551 ms 
+
+Request: GET /list/user at Thu Jun 30 2022 18:23:38 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": [
+		{
+			"_id": "62a8b84d60cead001681945f",
+			"name": "Edison Trajano da Silva",
+			"email": "edison.trajanosilva@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b07d51516cc90016ae2f4c",
+			"name": "Donizete Silva",
+			"email": "doni2545.ds@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b3a6aa9010060016d55c36",
+			"name": "Fefao",
+			"email": "fefao@fefao.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0c81e98f0016def220",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d0b81e98f0016def21f",
+			"name": "nnj",
+			"email": "n@i.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b44d2a81e98f0016def221",
+			"name": "jj",
+			"email": "jj@j.com",
+			"__v": 0
+		},
+		{
+			"_id": "62b4c44778f0b369b0261555",
+			"name": "Danilo",
+			"email": "danilo@gmail.com",
+			"__v": 0
+		},
+		{
+			"_id": "62bb183bf5a7720016e08ebc",
+			"name": "Lucimara",
+			"email": "lucimara.bustamante@btgpactual.com",
+			"__v": 0
+		}
+	]
+}
+Response: 200 174.485 ms 
+
+Request: GET /user/62a8b84d60cead001681945f at Thu Jun 30 2022 18:23:38 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"user": {
+		"_id": "62a8b84d60cead001681945f",
+		"name": "Edison Trajano da Silva",
+		"email": "edison.trajanosilva@gmail.com",
+		"__v": 0
+	}
+}
+Response: 200 87.228 ms 
+
+Request: GET /list/debts at Thu Jun 30 2022 18:23:38 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 304 259.935 ms 
+
+Request: GET /list/debts at Thu Jun 30 2022 18:23:43 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": []
+}
+Response: 200 29.610 ms 
+
+Request: GET /list/revenues at Thu Jun 30 2022 18:23:43 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Julho",
+					"listMouth": {
+						"_id": "62b9b9b03eccf060c4c7f0ae",
+						"tipoReceita": "Salário",
+						"valor": "1000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 34.860 ms 
+
+Request: GET /list/debts at Thu Jun 30 2022 18:24:03 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bc0b616a357cd4d38830",
+						"despesa": "Gas",
+						"valor": "80",
+						"categoria": "Casa",
+						"dataVencimento": "2022-06-28",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		}
+	]
+}
+Response: 200 32.447 ms 
+
+Request: GET /list/revenues at Thu Jun 30 2022 18:24:03 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+Response Body:
+{
+	"result": [
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62b9bb5a616a357cd4d3882f",
+						"tipoReceita": "Salário",
+						"valor": "5000",
+						"dataEntrada": "2022-06-27",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+					}
+				}
+			}
+		},
+		{
+			"user": {
+				"title": "danilo@gmail.com",
+				"mouth": {
+					"title": "Junho",
+					"listMouth": {
+						"_id": "62ba12d1028f876ee0bc29eb",
+						"tipoReceita": "Presente",
+						"valor": "300",
+						"dataEntrada": "2022-06-10",
+						"acoes": [
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/edit.png",
+							"https://raw.githubusercontent.com/daniloagostinho/crud-despesas/master/src/assets/images/delete.png"
+						]
+
+...
+Response: 200 37.448 ms 

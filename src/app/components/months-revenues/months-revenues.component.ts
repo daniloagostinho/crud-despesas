@@ -2,11 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { StoreService } from 'src/app/shared/service/store.service';
 
 @Component({
-  selector: 'app-months',
-  templateUrl: './months.component.html',
-  styleUrls: ['./months.component.scss']
+  selector: 'app-months-revenues',
+  templateUrl: './months-revenues.component.html',
+  styleUrls: ['./months-revenues.component.scss']
 })
-export class MonthsComponent implements OnInit {
+export class MonthsRevenuesComponent implements OnInit {
   mounth!: any;
   @Input() typeItem: any;
 
@@ -29,8 +29,13 @@ export class MonthsComponent implements OnInit {
   ngOnInit(): void {
     this.getMouthCurrent();
     console.log(this.typeItem)
+    this.storeService.getNext().subscribe(res => {
+      if(res) {
+        this.next();
+      }
+    })
 
-    this.storeService.getPrevRevenues().subscribe(res => {
+    this.storeService.getPrev().subscribe(res => {
       if(res) {
         this.prev();
       }
@@ -61,8 +66,6 @@ export class MonthsComponent implements OnInit {
     } else {
       this.storeService.setSearchRevenuesByMouth(true)
     }
-
-    this.storeService.setPrev(true)
   }
 
   next() {
@@ -76,6 +79,5 @@ export class MonthsComponent implements OnInit {
     } else {
       this.storeService.setSearchRevenuesByMouth(true)
     }
-    this.storeService.setNext(true)
   }
 }

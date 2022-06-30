@@ -16,6 +16,9 @@ export class StoreService {
   balanceTotal = new BehaviorSubject<any>(null)
   showPainelTextDebts = new BehaviorSubject<any>(false)
   showPainelTextRevenues = new BehaviorSubject<any>(null)
+  prevNext  = new BehaviorSubject<any>(false)
+  prev  = new BehaviorSubject<any>(false)
+  prevRevenues = new BehaviorSubject<any>(false)
   constructor() { }
 
   getStore() {
@@ -98,4 +101,28 @@ export class StoreService {
     return this.showPainelTextRevenues.asObservable()
   }
 
+
+  setNext(store: any) {
+    return this.prevNext.next(store);
+  }
+
+  getNext() {
+    return this.prevNext.asObservable();
+  }
+
+  setPrev(store: any) {
+    return this.prev.next(store);
+  }
+
+  getPrev() {
+    return this.prev.asObservable();
+  }
+
+  setPrevRevenues(store: any) {
+    this.prevRevenues.next(store)
+  }
+
+  getPrevRevenues() {
+    return this.prevRevenues.asObservable()
+  }
 }

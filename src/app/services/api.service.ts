@@ -19,17 +19,17 @@ export class ApiService {
   uploadFile(files: Set<File>) {
     const formData = new FormData();
     files.forEach(file => formData.append('file', file, file.name))
-    return this.httpClient.post(this.url + '/upload', formData, {reportProgress: true, observe: 'events'}).pipe(
+    return this.httpClient.post(environment.BASE_URL + '/upload', formData, {reportProgress: true, observe: 'events'}).pipe(
       delay(3000)
     )
   }
 
   downloadFile() {
-    return this.httpClient.get(this.url + '/download')
+    return this.httpClient.get(environment.BASE_URL + '/download')
   }
 
   registerUser(user: any) {
-    return this.httpClient.post(this.url + '/auth/register/user', user).pipe(
+    return this.httpClient.post(environment.BASE_URL + '/auth/register/user', user).pipe(
       catchError((err) => {
 
         return throwError(err);
@@ -38,36 +38,40 @@ export class ApiService {
   }
 
   registerRevenues(revenues: any, user: any) {
-    return this.httpClient.post(this.url + '/auth/revenues', revenues)
+    return this.httpClient.post(environment.BASE_URL + '/auth/revenues', revenues)
   }
 
   registerRegistrationDebts(debt: any) {
-    return this.httpClient.post(this.url + '/auth/debts', debt)
+    return this.httpClient.post(environment.BASE_URL + '/auth/debts', debt)
   }
 
   updateDebts(id: any, payload: any) {
-    return this.httpClient.put(this.url + '/update/debts/' + id, payload );
+    return this.httpClient.put(environment.BASE_URL + '/update/debts/' + id, payload );
+  }
+
+  updateReveues(id: any, payload: any) {
+    return this.httpClient.put(environment.BASE_URL + '/update/revenues/' + id, payload );
   }
 
   deleteDebts(id: any) {
-    return this.httpClient.delete(this.url + '/delete/debts/' + id);
+    return this.httpClient.delete(environment.BASE_URL + '/delete/debts/' + id);
   }
 
 
   getRegisterRevenues(param: any, user: any) {
     let headers = new HttpHeaders();
     headers = headers.set('mouth', param).set('user', user)
-    return this.httpClient.get(this.url + '/list/revenues', {headers: headers})
+    return this.httpClient.get(environment.BASE_URL + '/list/revenues', {headers: headers})
   }
 
   getRegisterDebts(param: any, user: any) {
     let headers = new HttpHeaders();
     headers = headers.set('mouth', param).set('user', user)
-    return this.httpClient.get(this.url + '/list/debts', {headers: headers})
+    return this.httpClient.get(environment.BASE_URL + '/list/debts', {headers: headers})
   }
 
   loginUser(user: any) {
-    return this.httpClient.post(this.url + '/auth/login', user)
+    return this.httpClient.post(environment.BASE_URL + '/auth/login', user)
   }
 
   userData(nameToken: string) {
@@ -76,7 +80,7 @@ export class ApiService {
     const headers= new HttpHeaders()
       .set('content-type', 'application/json')
       .set('Authorization', `Bearer ${getToken}`);
-    return this.httpClient.get(this.url + '/list/user', {headers})
+    return this.httpClient.get(environment.BASE_URL + '/list/user', {headers})
   }
   userInfo(nameToken: string, id: any) {
     const getToken = this.localStorage.getLocalStorage(nameToken);
@@ -85,6 +89,6 @@ export class ApiService {
       .set('content-type', 'application/json')
       .set('Authorization', `Bearer ${getToken}`);
 
-    return this.httpClient.get(this.url + `/user/${id}`, {headers: headers})
+    return this.httpClient.get(environment.BASE_URL + `/user/${id}`, {headers: headers})
   }
 }

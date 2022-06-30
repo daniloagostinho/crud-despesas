@@ -34,7 +34,7 @@ export class DashboardComponent implements OnInit, AfterContentChecked {
   ngOnInit(): void {
     this.menu = [
       {name: 'Cadastro de Dívidas'},
-      {name: 'Upload de Contas'},
+      {name: 'Cadastro de Receitas'},
     ]
 
     this.storeService.getBalancesExpenseTotal().subscribe(res => {
